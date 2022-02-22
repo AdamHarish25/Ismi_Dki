@@ -1,0 +1,46 @@
+/* example taken from https://stackoverflow.com/a/48976550/3466464 */
+/* import what we need to override */
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+
+
+
+/* set the overriding variables */
+$grid-breakpoints: (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+)
+$container-max-widths (
+  xxxs: 0,
+  xxs: 320px,
+  xs: 568px,
+  sm: 667px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1440px,
+  xxxl: 1600px
+);
+
+// Creates a wrapper for a series of columns
+@include make-row();
+
+// Make the element grid-ready (applying everything but the width)
+@include make-col-ready();
+
+// Without optional size values, the mixin will create equal columns (similar to using .col)
+@include make-col();
+@include make-col($size, $columns: $grid-columns);
+
+// Offset with margins
+@include make-col-offset($size, $columns: $grid-columns);
+
+/* override the !default vars with the values we set above */
+@import "bootstrap";

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="Local/css/bootstrap.css" />
+    <link rel="stylesheet" href="Local/css/Output.css" />
+    <link rel="stylesheet" href="Local/css/style.css" />
+    <title>IsmiDki</title>
+    <style type="text/css">
+      .autohide {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+      }
+      .scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+      }
+      .scrolled-up {
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .activel {
+        font-weight: bold;
+        color: blue;
+      }
+      .containts::before {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 2px;
+        background: white;
+        left: 30px;
+        opacity: 20;
+        top: 50%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="autohide navbar navbar-expand-lg navbar-light bg-white" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand font-Roundd" href="#"
+          ><img class="w-20" src="img/LogoIsmi.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler border-none shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link activel border-b-2 border-transparent px-4 py-3 md:hover:border-blue-600 md:hover:text-gray-700"
+                aria-current="page"
+                href="#"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-2">
+              <button
+                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:text-gray-700 dropdown-toggle"
+                id="navbarDropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profile
+              </button>
+              <ul
+                class="dropdown-menu rounded-b-xl rounded-t-none animationGrow border-0 py-3 px-4"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="#Sejarah"
+                    >Sejarah</a
+                  >
+                </li>
+                <br />
+                <li>
+                  <a
+                    class="dropdown-item sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="#VisiMisi"
+                    >Visi dan Misi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="#Struktur"
+                >Struktur</a
+              >
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="#DaftarAnggota"
+                >Anggota</a
+              >
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="Kegiatan.html"
+                >Kegiatan</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid bg-gray-300">
+      <div class="row overflow-x-hidden">
+        <div
+          class="bg-gray-500 relative bg-gradient-to-b from-green-200 to-red-300 h-screen flex justify-center col-12"
+        >
+          <img class="object-contain opacity-20" src="img/indonesia.svg" alt="" />
+          <section class="z-20">
+            <img
+              class="absolute xs:w-24 md:w-36 left-2/4 xs:mt-24 md:mt-16 xl:mt-20 2xl:mt-32 top-1/4 transform -translate-x-2/4 -translate-y-2/4"
+              src="img/LogoIsmi.png"
+              alt=""
+            />
+            <h1
+              class="absolute font-bold text-center font-Poppins xs:text-2xl xs:my-10 md:mt-0 md:text-3xl lg:text-4xl left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4"
+            >
+              Selamat Datang Di Website Resmi <strong>IsmiDki</strong>
+            </h1>
+            <h2
+              class="absolute font-Roboto text-center text-sm md:text-xl left-2/4 top-2/4 xs:mt-32 md:mt-16 transform -translate-x-2/4 -translate-y-2/4"
+            >
+              Silahkan Explorasi website resmi Kami
+            </h2>
+            <div
+              class="absolute left-2/4 top-2/4 xs:mt-52 md:mt-36 transform -translate-x-2/4 -translate-y-2/4 flex justify-center w-full h-10"
+            >
+              <a
+                class="animate-bounce no-underline duration-300"
+                href="#Sejarah"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="Sejarah"
+      class="container-fluid h-full sm:mt-10 lg:mt-0 bg-gray-50"
+    >
+      <div class="row">
+        <div class="col-lg-5 col-sm-12 col-md-12 relative lg:h-full">
+          <img
+            draggable="false"
+            class="object-cover z-50 xs:w-screen lg:w-10/12 2xl:max-w-3xl xl:top-40 lg:absolute lg:top-52 lg:left-1/3"
+            src="img/bla2.jpg"
+            alt=""
+          />
+        </div>
+        <div
+          class="col-lg-7 col-sm-12 col-md-12 relative pt-20 px-20 bg-green-800 h-full"
+        >
+          <h1
+            class="text-center text-gray-50 relative md:containts text-3xl font-round font-semibold mb-10"
+          >
+            Sejarah Organisasi Ismi
+          </h1>
+          <hr class="mb-14 -mt-4 bg-gray-50" />
+
+          <p
+            class="text-left text-gray-50 mb-16 lg:text-base font-normal 2xl:ml-52 lg:ml-28 xl:ml-40 font-Rubik"
+          >
+            <strong>ISMI</strong> (Ikatan Saudagar Muslim se-Indonesia)
+            didirikan oleh 4 ormas besar, <br> yaitu : NU, MUHAMMADIYAH, ICMI dan MUI
+            di Jakarta pada tanggal 18 Desember 2012 sebagai institusi
+            per-kumpulan Saudagar Muslim Seluruh Indonesia, merupakan kebutuhan
+            dalam kancah da'wah bil hal membangun perekonomian dan kesejahteraan
+            umat, bangsa dan negara. <br /><br />
+            <strong>ISMI</strong> sebagai wadah Saudagar / Pengusaha Muslim yang
+            merupakan mayoritas pengusaha di negara Indonesia sudah sepatutnya
+            menjadi penopang perekonomian nasional di tengah perubahan yang
+            terjadi di dunia. <br /><br />
+            <strong>ISMI</strong> perlu mendorong ekonomi Islam sebagai konsep
+            yang rahmatan lil 'alamin untuk dimanifestasikan dalam suatu
+            tindakan yang melingkupi peningkatan kesejahteraan, pemerataan
+            kesempatan, penegakan kebenaran dan keadilan serta turut memperkokoh
+            persatuan dan kesatuan bangsa dan negara dalam bingkai : Pancasila,
+            UUD 1945, Bhinneka Tunggal Ika, dan NKRI. Problematika dan tantangan
+            perekonomian dalam lingkup regional, nasional maupun internasional
+            saat ini dalam kondisi kritis dan sangat kompleks, sehingga perlu
+            dijadikan perhatian khusus. <br /><br />
+            <strong>ISMI</strong> perlu menganalisis secara mendalam dan
+            mengajukan solusi yang terbaik guna penyelamatan ekonomi yang
+            membawa pada kesejahteraan masyarakat di Indonesia pada khususnya
+            dan umat manusia di dunia pada umumnya. <br />Saudagar / Pengusaha
+            Muslim di Indonesia harus mengambil peran dan langkah nyata dalam
+            pemecahan sistem ekonomi yang ada saat ini. Oleh Karenanya, sudah
+            sepatutnya pengusaha muslim menjadi pelaku utama yang memberi
+            manfaat, kontribusi besar dan menjadi tiang / soko guru perekonomian
+            UKM (Usaha Kecil dan Menengah) nasional di tengah perubahan yang
+            terjadi di dunia global dan di era digital.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid h-full mt-0">
+      <div id="VisiMisi" class="row">
+        <div class="col-12 h-full relative bg-orange-400 flex justify-center">
+          <div
+            class="bg-white xs:w-full sm:w-5/6 lg:w-2/3 h-full flex justify-center border-y-2 border-gray-300"
+          >
+            <div class="row flex justify-start">
+              <div class="col-12">
+                <h1 class="text-center font-Rubik text-3xl mt-12">
+                  Visi dan Misi<strong class="font-extrabold font-round">
+                    IsmiDki</strong
+                  >
+                </h1>
+                <hr class="mb-10 mx-36 mt-2 h-3 opacity-20 bg-black" />
+                <div class="col-12 flex justify-center mt-9">
+                  <img
+                    draggable="false"
+                    class="w-2/4 z-30"
+                    src="img/Project_44-01.jpg"
+                    alt=""
+                    title="Created by naki-sama from Vecteezy.com"
+                  />
+                </div>
+              </div>
+              <div class="col-12 xs:p-16 lg:p-28 -mt-11">
+                <h1 class="text-center font-round font-bold text-2xl">Visi</h1>
+                <p class="text-center font-Roboto text-lg mt-6 text-muted">
+                  Visi Kami menjadi wadah persatuan Saudagar Muslim menuju
+                  kesuksesan dalam berbisnis dan mencapai kesejahteraan bersama.
+                </p>
+              </div>
+              <div class="col-12 xs:p-16 lg:p-36 -mt-20">
+                <h1 class="text-center font-round font-bold text-2xl">Misi</h1>
+                <p class="text-center font-Roboto text-lg mt-6 text-muted">
+                  Misi Kami adalah mendorong penumbuhan, pengembangan dan
+                  kemandirian Saudagar Muslim. Meningkatkan sumber daya manusia,
+                  daya saing dan peran aktif dalam ekonomi skala nasional,
+                  regional dan internasional. Meningkatkan kerjasama dan
+                  jaringan usaha Saudagar Muslim se-Indonesia Tagline
+                  <strong>ISMI</strong> Merangkai Persatuan, Kesuksesan dan
+                  Kesejahteraan.(Dengan modal sosial yang sangat potensial
+                  karena didirikan oleh NU, Muhammadiyah, ICMI dan MUI,
+                  seharusnya <strong>ISMI</strong> mampu merangkai persatuan
+                  saudagar muslim se-Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="Struktur" class="container-fluid h-full mb-32">
+      <div class="row">
+        <div class="col-12 h-4 text-center font-bold font-Poppins py-10">
+          <h1 class="text-black text-2xl">Struktur Ismi Dki</h1>
+        </div>
+        <div class="col-12 flex justify-center">
+          <div class="col-6">
+            <img class="object-contain w-auto" src="img/StrukturIsmiDki2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="DaftarAnggota" class="container-fluid h-full mb-32">
+      <div class="row">
+        <div class="col-12 flex justify-center h-full bg-white">
+          <div
+            class="xs:w-full md:w-9/12 h-full shadow-lg shadow-black my-40 rounded-xl bg-green-300 flex justify-center"
+          >
+            <div class="row py-5">
+              <div class="col-12">
+                <h1 class="text-center text-2xl font-bold font-round">
+                  Jadi bagian dari Kami
+                </h1>
+              </div>
+
+              <div class="col-lg-6 col-xs-12 pt-10 px-16">
+                <div class="form-floating mb-3">
+                  <input
+                    type="text"
+                    class="form-control shadow-blue-400"
+                    id="Name"
+                    placeholder="John Doe"
+                  />
+                  <label for="Name">Nama</label>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xs-12 pt-10 px-16">
+                <div class="form-floating mb-3">
+                  <input
+                    type="email"
+                    class="form-control shadow-blue-400"
+                    id="Email"
+                    placeholder="Example@gmail.com"
+                  />
+                  <label for="Email">E-mail</label>
+                </div>
+              </div>
+              <div class="col-lg-5 col-xs-12 py-4 px-16">
+                <form class="form-floating">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="Nomor"
+                    placeholder="Number"
+                    pattern="ex:0811222333444"
+                  />
+                  <label for="Nomor">Nomor Hp</label>
+                </form>
+              </div>
+              <div class="col-lg-7 col-xs-12 py-4 px-16">
+                <form class="form-floating date">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="tgl-lahir"
+                    placeholder="Number"
+                  />
+                  <label for="tgl-lahir">Tanggal Lahir</label>
+                </form>
+              </div>
+              <div class="col-12 pb-10 px-16">
+                <div class="form-floating">
+                  <textarea
+                    class="form-control h-36"
+                    placeholder="Alamat"
+                    id="Address"
+                  ></textarea>
+                  <label for="Address">Alamat</label>
+                </div>
+              </div>
+              <div class="col-lg-6 col-xs-12 pb-10 px-16">
+                <form class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Company"
+                    placeholder="Nama Perusahaan"
+                  />
+                  <label for="Company">Nama Perusahaan</label>
+                </form>
+              </div>
+              <div class="col-lg-7 col-xs-12 pb-10 px-16">
+                <form class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="productsName"
+                    placeholder="Nama Produk"
+                  />
+                  <label for="productsName">Nama Produk</label>
+                </form>
+              </div>
+              <div class="col-lg-5 col-xs-12 pb-10 px-16">
+                <form class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="products"
+                    placeholder="Jenis Produk"
+                  />
+                  <label for="products">Jenis Produk</label>
+                </form>
+              </div>
+              <div class="col-12 pb-10 px-16">
+                <form class="form-floating">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="Website"
+                    placeholder="Website Perusahaan"
+                    value="https://"
+                  />
+                  <label for="Website">Website Perusahaan</label>
+                </form>
+              </div>
+              <div class="col-12 pb-10 px-16 flex justify-center text-">
+                <button
+                  class="px-40 py-3 rounded-lg bg-gray-100 text-black font-bold hover:ring-2 hover:ring-blue-300 transform duration-200 hover:text-lg focus:ring-4 focus:ring-blue-300 focus:text-lg"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="bg-black p-20 rounded-t-3xl">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <h2 class="font-Poppins text-3xl mb-4">
+              <a href="#" class="text-white">Ismidki.org</a>
+            </h2>
+            <p
+              class="mb-5 uppercase font-bold text-muted text-white no-underline"
+            >
+              <a class="mr-5 transform duration-200 hover:text-white" href="#"
+                >Beranda</a
+              >
+              <a class="mr-5 transform duration-200 hover:text-white" href="#Struktur"
+                >Struktur</a
+              >
+              <a class="mr-5 transform duration-200 hover:text-white" href="#Sejarah"
+                >Sejarah</a
+              >
+              <a class="mr-5 transform duration-200 hover:text-white" href="#DaftarAnggota"
+                >Anggota</a
+              >
+            </p>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <p class="mb-8 text-muted text-white">
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All right reserved
+                <a
+                  class="no-underline text-white font-Poppins"
+                  href="https://www.ismidki.org"
+                >
+                  Ismidki.org</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div
+    title="Back to top"
+    id="uwow"
+    class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <script>
+    const tombol = document.querySelector("#uwow");
+    tombol.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
+  <script src="Local/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        el_autohide = document.querySelector(".autohide");
+
+        // add padding-top to body (if necessary)
+        navbar_height = document.querySelector(".navbar").offsetHeight;
+        document.body.style.paddingTop = navbar_height + "px";
+        if (el_autohide) {
+          var last_scroll_top = 0;
+          window.addEventListener("scroll", function () {
+            let scroll_top = window.scrollY;
+            if (scroll_top < last_scroll_top) {
+              el_autohide.classList.remove("scrolled-down");
+              el_autohide.classList.add("scrolled-up");
+            } else {
+              el_autohide.classList.remove("scrolled-up");
+              el_autohide.classList.add("scrolled-down");
+            }
+            last_scroll_top = scroll_top;
+          });
+          // window.addEventListener
+        }
+        // if
+      });
+      $(".navbar-collapse a").click(function () {
+        $(".navbar-collapse").collapse("hide");
+      });
+
+      $(function () {
+        $("#tgl-lahir").datepicker({
+          calendarWeeks: true,
+          todayHighlight: true,
+          autoclose: true,
+        });
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="Local/js/bootstrap.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <!-- <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAXirwfA8hl0PJZE9UVvF3JT64HomY-iPs",
+        authDomain: "ismidki.firebaseapp.com",
+        projectId: "ismidki",
+        storageBucket: "ismidki.appspot.com",
+        messagingSenderId: "800667274568",
+        appId: "1:800667274568:web:7b1e601b69480f6f5db77d",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = firebase.auth();
+      const database = firebase.database();
+      function register() {
+        var email = document.getElementById("Email").value;
+        var fullName = document.getElementById("Name").value;
+        var NoHp = document.getElementById("Nomor").value;
+        var birth = document.getElementById("tgl-lahir").value;
+        var addr = document.getElementById("Address").value;
+        var comp = document.getElementById("Company").value;
+        var pName = document.getElementById("productsName").value;
+        var products = document.getElementById("products").value;
+        var wb = document.getElementById("Website").value;
+
+        if (validate_email(email) == false) {
+          alert("Email yang anda masukkan salah.");
+          return;
+        }
+        if (validate_field(fullName) == false || validate_field(NoHp) == false || validate_field(birth) == false || validate_field(addr) == false || validate_field(comp) == false || validate_field(pName) == false || validate_field(products) == false || validate_field(wb) == false) {
+          alert("Harus diisi!");
+          return;
+        }
+
+        auth.createUserWithEmailAndPassword(email).then(function () {
+          
+        })
+      }
+
+      function validate_email(email) {
+        expression = /^[^@]+@\w+(\.\w+)+\w$/;
+        if (expression.test(email) == true) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      function validate_field(field) {
+        if (field == null) {
+          return false;
+        }
+
+        if (field.length <= 0) {
+          return false;
+        } else {
+          return true;
+        }
+      }
+    </script> -->
+  </body>
+</html>
