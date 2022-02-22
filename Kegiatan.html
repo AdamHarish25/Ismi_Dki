@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="Local/css/bootstrap.css" />
+    <link rel="stylesheet" href="Local/css/Output.css" />
+    <link rel="stylesheet" href="Local/css/style.css" />
+    <title>Artikel</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon" />
+    <style type="text/css">
+      .autohide {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+      }
+      .scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+      }
+      .scrolled-up {
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .activel {
+        font-weight: bold;
+        color: blue;
+      }
+      .containts::before {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 2px;
+        background: white;
+        left: 30px;
+        opacity: 20;
+        top: 50%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="autohide navbar navbar-expand-lg navbar-light bg-gray-50 shadow-md"
+      role="navigation"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="w-20" src="img/LogoIsmi.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler border-none shadow-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link activel border-b-2 border-transparent px-4 py-3 md:hover:border-blue-600 md:hover:text-gray-700"
+                aria-current="page"
+                href="index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="#"
+                >Struktur</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-2">
+              <button
+                class="nav-link dropdown-toggle border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:text-gray-700"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Konten Halaman
+              </button>
+              <ul
+                class="dropdown-menu rounded-b-xl rounded-t-none animationGrow border-0 py-3 px-4 shadow-md"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="#Artikel1"
+                    >Artikel 1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 mt-2"
+                    href="#Artikel2"
+                    >Artikel 2</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item ml-2">
+                <a
+                  class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                  href="#"
+                  >Daftar Menjadi Anggota</a
+                >
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="Artikel1" class="container-fluid h-screen justify-content-center xs:mb-96">
+      <div class="row">
+        <div class="col-12 h-fit mt-10">
+          <h1 class="text-center xs:text-2xl md:text-4xl font-bold font-Poppins">
+            Putra BJ Habibie Lantik Pengurus ISMI DKI Jakarta <br />
+            Periode 2021 - 2026
+          </h1>
+        </div>
+        <div class="col-12 h-fit mt-10 flex justify-center">
+          <figure class="figure">
+            <img
+              src="img/PelantikanISMIDKI.jpeg"
+              class="figure-img xs:w-8/12 md:w-2/4 mx-auto d-block rounded-lg"
+              alt=""
+            />
+            <figcaption class="figure-caption text-center text-sm mt-3">
+              Sumber: Pelantikan Kepengurusan ISMI DKI Jakarta. (Istimewa)
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-12 xs:px-10 md:px-32 py-10">
+          <p class="text-left font-Rubik text-base">
+            <strong>Jakarta</strong> - Sempat vakum,
+            <a class="text-blue-400" href="index.html"
+              >Ikatan Saudagar Muslim Indonesia (ISMI) DKI Jakarta</a
+            >
+            belum lama ini mengumumkan restrukturisasi organisasi.
+            <br />
+            <br />
+
+            Kali ini, Kepengurusan ISMI DKI Jakarta Periode 2021-2026 pun secara
+            resmi dilantik dan dikukuhkan oleh Ketua Umum ISMI Pusat, Ilham
+            Akbar Habibie, di acara Silaturahmi Bisnis ke-12 di Banda Aceh pada
+            Selasa (15/6/2021).
+            <br />
+            <br />
+            Nama-nama pengurus ISMI DKI periode tahun 2021-2026 yang dilantik
+            dan dikukuhkan sendiri termasuk Ketua Umum ISMI DKI, H Biemjamin,
+            dan Sekretaris Umum ISMI DKI, Parwis Nasution, dan masih banyak
+            lagi.
+            <br />
+            <br />
+            Setelah dilantik, Biemjamin memaparkan bahwa ia dan ISMI DKI
+            memiliki komitmen untuk membangun Usaha Kecil dan Menengah (UKM)
+            dari local to global.
+            <br />
+            <br />
+
+            "Oleh karena itu akan menguatkan kearifan lokal DKI agar kuat dan
+            memiliki keunggulan bersaing sampai tingkat nasional serta
+            internasional," kata Biemjamin dalam keterangan resminya.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid h-screen justify-content-center xs:my-96">
+      <div class="row">
+        <div id="Artikel2" class="col-12 h-fit flex justify-center py-0">
+          <figure class="figure">
+            <img
+              src="img/SelpiBarengIsmiDki.jpg"
+              class="figure-img xs:w-8/12 md:w-2/4 mx-auto d-block rounded-lg"
+              alt="..."
+            />
+            <figcaption class="figure-caption text-center text-sm mt-3">
+              Sumber: ISMI DKI Jakarta dan Bupati Aceh Barat Daya, Akmal
+              Ibrahim. (Istimewa)
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-12 xs:px-10 md:px-32 py-10">
+          <p class="text-left font-Rubik text-base">
+            Biemjamin juga mengajak segenap pengurus ISMI DKI Jakarta
+            bersungguh-sungguh dalam menjalankan kepengurusan ini sampai akhir,
+            sehingga kepengurusan berikutnya memiliki gambaran akhir yang jelas
+            dan terarah.
+            <br />
+            <br />
+            "Hal tersebut merupakan bagian dari membangun rencana jangka panjang
+            yg selaras dan berkelanjutan untuk ISMI DKI," lanjut Biemjamin.
+            <br />
+            <br />
+            Adapun acara tersebut dibuka langsung oleh Menteri Koperasi (Menkop)
+            dan Usaha Kecil dan UKM Republik Indonesia (RI), Teten Masduki.
+            <br />
+            <br />
+            Selain itu, acara Silaturahmi Bisnis ke-12 ini semakin meriah karena
+            turut dihadiri oleh Wali Kota Aceh, Aminullah Usman, dan Bupati Aceh
+            Barat Daya, Akmal Ibrahim.
+            <br />
+            <br />
+            Ilham Akbar Habibie dalam kesempatan itu mengajak semua peserta
+            untuk bergerak bersama agar meningkatkan kewirausahaan dengan upaya
+            melakukan inovasi lewat memaksimalkan teknologi.
+            <br />
+            <br />
+            "Sehingga keberlanjutan kebermanfaatan berpihak untuk pengusaha dan
+            masyarakat Muslim," terang putra pertama Presiden ke-3 RI BJ
+            Habibie.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 h-fit xs:my-16 md:my-20 text-center">~~))((~~</div>
+    <footer class="bg-black p-20 rounded-t-3xl">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+              <h2 class="font-Poppins text-3xl mb-4">
+                <a href="#" class="text-white">Ismidki.org</a>
+              </h2>
+              <p
+                class="mb-5 uppercase font-bold text-muted text-white no-underline"
+              >
+                <a class="mr-5 transform duration-200 hover:text-white" href="index.html"
+                  >Beranda</a
+                >
+                <a class="mr-5 transform duration-200 hover:text-white" href="index.html#Struktur"
+                  >Struktur</a
+                >
+                <a class="mr-5 transform duration-200 hover:text-white" href="https://www.urbanasia.com/putra-bj-habibie-lantik-pengurus-ismi-dki-jakarta-periode-20212026-U34673"
+                  >Source</a
+                >
+                <br class="md:hidden">
+                <a class="mr-5 transform duration-200 hover:text-white" href="index.html#DaftarAnggota"
+                  >Daftar Menjadi Anggota</a
+                >
+              </p>
+            </div>
+            <div class="row mt-5">
+              <div class="col-md-12 text-center">
+                <p class="mb-8 text-muted text-white">
+                  Copyright &copy;
+                  <script>
+                    document.write(new Date().getFullYear());
+                  </script>
+                  All right reserved
+                  <a
+                    class="no-underline text-white font-Poppins"
+                    href="https://www.ismidki.org"
+                  >
+                    Ismidki.org</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <div
+      title="Back to top"
+      id="uwow"
+      class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+          clip-rule="evenodd"
+        />
+      </svg>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      const tombol = document.querySelector("#uwow");
+      tombol.addEventListener("click", function () {
+        window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        el_autohide = document.querySelector(".autohide");
+
+        // add padding-top to body (if necessary)
+        navbar_height = document.querySelector(".navbar").offsetHeight;
+        document.body.style.paddingTop = navbar_height + "px";
+        if (el_autohide) {
+          var last_scroll_top = 0;
+          window.addEventListener("scroll", function () {
+            let scroll_top = window.scrollY;
+            if (scroll_top < last_scroll_top) {
+              el_autohide.classList.remove("scrolled-down");
+              el_autohide.classList.add("scrolled-up");
+            } else {
+              el_autohide.classList.remove("scrolled-up");
+              el_autohide.classList.add("scrolled-down");
+            }
+            last_scroll_top = scroll_top;
+          });
+          // window.addEventListener
+        }
+        // if
+      });
+      $(".navbar-collapse a").click(function () {
+        $(".navbar-collapse").collapse("hide");
+      });
+    </script>
+  </body>
+</html>
