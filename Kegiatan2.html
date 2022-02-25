@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="Local/css/bootstrap.css" />
+    <link rel="stylesheet" href="Local/css/Output.css" />
+    <link rel="stylesheet" href="Local/css/style.css" />
+    <title>ISMI DKI Jakarta Gelar Dialog dan Rakorwil</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="img/Xcon" />
+    <style type="text/css">
+      .autohide {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+      }
+      .scrolled-down {
+        transform: translateY(-100%);
+        transition: all 0.3s ease-in-out;
+      }
+      .scrolled-up {
+        transform: translateY(0);
+        transition: all 0.3s ease-in-out;
+      }
+      .activel {
+        font-weight: bold;
+        color: blue;
+      }
+      .containts::before {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 2px;
+        background: white;
+        left: 30px;
+        opacity: 20;
+        top: 50%;
+        position: absolute;
+      }
+      @media only screen and (max-width: 767px) {
+        body {
+          height: 800vh !important;
+          position: relative;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        body {
+          height: 700vh !important;
+          position: relative;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav
+      class="autohide navbar navbar-expand-lg navbar-light bg-gray-50 shadow-md"
+      role="navigation"
+      aria-labelledby="TopNav"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="w-20" src="img/LogoIsmi.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler border-none shadow-none"
+          type="button"
+          id="ToggleButton"
+          onclick="OnOn()"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link activel border-b-2 border-transparent px-4 py-3 md:hover:border-blue-600 md:hover:text-gray-700"
+                aria-current="page"
+                href="index.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="#"
+                >Struktur</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-2">
+              <button
+                class="nav-link dropdown-toggle border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:text-gray-700"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Kegiatan
+              </button>
+              <ul
+                class="dropdown-menu rounded-b-xl rounded-t-none animationGrow border-0 py-3 px-4 shadow-md fade-down"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="Kegiatan.html#Artikel1"
+                    >Artikel 1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 mt-2"
+                    href=""
+                    >Artikel 2</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="index.html#DaftarAnggota"
+                >Daftar Menjadi Anggota</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid my-10">
+      <div class="row">
+        <div class="col-12 text-center font-bold font-Poppins xs:text-xl md:text-4xl">
+          ISMI DKI Jakarta Gelar Dialog dan Rakorwil
+        </div>
+        <div class="col-12 flex justify-center py-10">
+          <figure class="figure">
+            <img src="img/foto2.jpeg" class="figure-img d-block mx-auto xs:w-3/4 md:w-2/4 rounded-md" alt="...">
+            <figcaption class="figure-caption text-center font-Rubik">Ikatan Saudagar Muslim Indonesia (ISMI) Provinsi DKI Jakarta menggelar dialog interaktif <br class="xs:hidden md:flex"> dan Rakorwil di Hotel Grand Cempaka, Jakarta Pusat, Sabtu (6/11/2021).</figcaption>
+          </figure>
+        </div>
+        <div class="col-12 xs:px-10 md:px-28 2xl:px-60 py-10">
+          <p class="text-left font-Rubik text-base">
+            Jakarta, PERISAIHUKUM.ID – Ikatan Saudagar Muslim Indonesia (ISMI) Provinsi DKI Jakarta menggelar dialog interaktif dan Rakorwil di Hotel Grand Cempaka, Jakarta Pusat, Sabtu (6/11/2021).
+            <br><br>
+            Dialog dan Rakorwil yang digelar secara luar jaringan dan melalui media siar langsung ini bertemakan “Akselerasi kolaborasi Ekonomi Umat Islam berlandaskan Kearifal Lokal dalam Persaingan Global”
+            <br><br>
+            Ketua Umum MPP ISMI, Dr-Ing. Ilham A. Habibie, dalam sambutannya menyampaikan bahwa
+            yang membuat ISMI berbeda dengan organisasi lain adalah ISMI Fokus kepada usaha kecil dan menengah.
+            <br><br>
+            “Perlu adanya tim dan bersama merekalah kita membantu usaha mikro di seluruh Indonesia. Sebagai pengusaha kita bisa bersaing karena dalam usaha tidak boleh monopoli,” ujar Ilham.</p>
+        </div>
+        <div class="col-12 flex justify-center py-10">
+          <figure class="figure">
+            <img src="img/tandatangan.jpeg" alt="" class="figure-img d-block mx-auto xs:w-3/4 md:w-2/4 rounded-md">
+            <figcaption class="figure-caption text-center font-Rubik">
+              Penandatanganan MOU Kerjasama ISMI DKI <br class="xs:flex md:hidden"> dengan PT Gembira
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-12 xs:px-10 md:px-28 2xl:px-60 py-10">
+          <p class="text-left font-Rubik text-base">
+            DKI Jakarta, lanjut Ilham, boleh dikatakansebagai pusat dari epicentrum keuangan di Indonesia. DKI sering menjadi contoh bisnis di daerah. Itu semua tempat dimana ISMI berkembang. Juga DKI sering menjadi contoh bisnis di daerah.
+            <br><br>
+            Dengan potensi itu Ilham menghimbau ISMI DKI untuk mengambil Peluang ini.
+            <br><br>
+            Di tempat yang sama, Ketua panitia, Sukmawati menyampaikan laporannya bahwa Rapat Koordinasi Wilayah (Rakorwil) ini berdasarkan pada pasal 27 dan 30 Anggaran Dasar ISMI tentang rapat.
+            <br></br>
+            “Tujuan Rakorwil ini untuk menyamakan persepsi dalam meningkatkan hubungan,” kata Sukmawati.
+            <br><br>
+            95 orang peserta yang baru konfirmasi 75 orang dan hadir 75 orang, semua juga bisa mengikuti acara ini secara online, sambungnya.
+          </p>
+        </div>
+        <div class="col-12 flex justify-center py-10">
+          <figure class="figure">
+            <img class="figure-img d-block mx-auto xs:w-3/4 md:w-2/4 rounded-md" src="img/gambar.jpeg" alt="">
+            <figcaption class="figure-caption text-center font-Rubik">
+              penandatanganan MOU Kerjasama <a class="text-blue-600 hover:text-blue-400" href="https://pengurusanijin.net">www.pengurusanijin.net</a> dengan ISMI DKI
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-12 xs:px-10 md:px-28 2xl:px-100 py-10">
+          <p class="text-left font-Rubik text-base">
+            Dalam sambutannya, Biem T Benyamin, Ketua ISMI Provinsi DKI Jakarta menjabarkan bagaimana ISMI lahir dan bertujuan.
+            <br><br>
+            “ISMI ini lahir dari 4 organisasi besar (NU, Muhamadiyah, MUI dan ICMI) pada tahun 2012. ISMI konsentrasi di ekonomi,” tutur Biem T Benyamin ketua ISMI Provins DKI Jakarta dalam sambutannya.
+            <br><br>
+            Menurut Biem, yang juga anak ketiga seniman legendaris Betawi, Benyamin S ini ISMI jangan sampai ketinggalan dalam mengikuti perkembangan teknologi saaat ini.
+            <br><br>
+            “Kalau kita tidak berkolaborasi kita akan ketinggalan, kita harus mengikuti telnologi. Nanti ISMI membuat aplikasi sehingga melalui aplikasi itu bisa langsung jadi anggota,” sambungnya.
+          </p>
+        </div>
+        <div class="col-12 flex justify-center py-10">
+          <figure class="figure">
+            <img class="figure-img d-block mx-auto xs:w-3/4 md:w-2/4 rounded-md" src="img/MouKAIdanISMI.jpeg" alt="">
+            <figcaption class="figure-caption text-center font-Rubik">
+              Penandatanganan MOU LBH antara ISMI dengan KAI (Kongres Advokad Indonesia).
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col-12 xs:px-10 md:px-28 2xl:px-100 py-10">
+          <p class="text-left font-Rubik text-base">
+            Dalam acara ini dilakukan penandatanganan MoU (Kesepakatan bersama) antara ISMI DKI Jakarta dan Euro Management, antara ISMI DKI dan Lembaga Sertifikasi, antara ISMI DKI dan BSI, serta ISMI dan Kongres Advokasi Indonesia.
+            <br><br>
+            Terkait keanggotaan baru ISMI DKI, Biem membuka peluang bagi siapa saja.
+            <br><br>
+            “Kita sangat terbuka tidak perlu saudagar besar,” tegas Biem di hadapan para jurnalis.
+            <br><br>
+            Dialog Interaktif dengan tema “Akselerasi kolaborasi Ekonomi Umat Islam berlandaskan Kearifal Lokal dalam Persaingan Global” dengan narasumber Direktur Retail BSI, Ir. Kokok Alun Akbar, Staff ahli menteri bidang hubungan antar lembaga, Kementerian Koperasi dan UMKM, Luhur Pradjarto dan Department Head Mikro Banking Group Bank Syariahahndonesi, Teguh Budianto.
+            <br><br>
+            Hadir pula Ichsan, Ketua Umum Forkabi, ketua Kongres Advokasi Indonesia, Siti Jamallah Lubius SH dan semua pengurus ISMI DKI Jakarta periode 2021-2026.
+            <br><br><br>
+           <p class="text-center">~~(())~~</p>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid my-20">
+      <div class="col-12 h-fit mt-24">
+        <nav aria-label="Page navigation example">
+          <ul class="pagination justify-content-center">
+            <li class="page-item">
+              <a
+                class="page-link shadow-none text-black xs:px-5 text-xl"
+                aria-label="previous"
+                href="Kegiatan.html"
+              >
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li class="page-item">
+              <a
+                class="page-link text-black font-Poppins shadow-none xs:px-5 text-xl"
+                href="Kegiatan.html"
+                >1</a
+              >
+            </li>
+            <li class="page-item active">
+              <a
+                class="page-link font-Poppins shadow-none xs:px-5 text-xl"
+                href="Kegiatan2.html"
+                >2</a
+              >
+            </li>
+            <!-- <li class="page-item"><a class="page-link text-black font-Poppins shadow-none" href="#">3</a></li> -->
+            <li class="page-item disabled">
+              <a class="page-link xs:px-5 text-gray-500 text-xl" href="#" aria-label="next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        el_autohide = document.querySelector(".autohide");
+
+        // add padding-top to body (if necessary)
+        navbar_height = document.querySelector(".navbar").offsetHeight;
+        document.body.style.paddingTop = navbar_height + "px";
+        if (el_autohide) {
+          var last_scroll_top = 0;
+          window.addEventListener("scroll", function () {
+            let scroll_top = window.scrollY;
+            if (scroll_top < last_scroll_top) {
+              el_autohide.classList.remove("scrolled-down");
+              el_autohide.classList.add("scrolled-up");
+            } else {
+              el_autohide.classList.remove("scrolled-up");
+              el_autohide.classList.add("scrolled-down");
+            }
+            last_scroll_top = scroll_top;
+          });
+          // window.addEventListener
+        }
+        // if
+      });
+      // $(function () {
+      //       $(document).click(function (event) {
+
+      //           var clickover = $(event.target);
+      //           var _opened = $(".navbar-collapse").hasClass("navbar-collapse collapse show");
+      //           if (_opened === true && !clickover.hasClass("navbar-toggler")) {
+      //               $("button.navbar-toggler").click();
+      //               $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
+      //           }
+      //       });
+      //   });
+      $(".navbar-collapse a").click(function () {
+        $(".navbar-collapse").collapse("hide");
+        $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
+      });
+      function OnOn() {
+       $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
+      }
+    </script>
+  </body>
+  <footer
+      class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0"
+    >
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <h2 class="font-Poppins text-3xl mb-4">
+              <a href="#" class="text-white">Ismidki.org</a>
+            </h2>
+            <p
+              class="mb-5 uppercase font-bold text-muted text-white no-underline"
+            >
+              <a
+                class="mr-3 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                href="index.html"
+                >Beranda</a
+              >
+              <a
+                class="mr-3 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                href="index.html#Struktur"
+                >Struktur</a
+              >
+              <a
+                class="mr-2 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                href="https://perisaihukum.id/ismi-dki-jakarta-gelar-dialog-dan-rakorwil/"
+                >Source</a
+              >
+              <br>
+              <br class="xs:flex md:hidden">
+              <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
+                Jadi Anggota Kami
+              </a>
+            </p>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All right reserved
+                <a
+                  class="no-underline text-white font-Poppins"
+                  href="https://www.ismidki.org"
+                >
+                  Ismidki.org</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div
+    title="Back to top"
+    id="uwow"
+    class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <script>
+    const tombol = document.querySelector("#uwow");
+    tombol.addEventListener("click", function () {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth",
+      });
+    });
+  </script>
+</html>

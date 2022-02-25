@@ -13,8 +13,10 @@ module.exports = {
     },
     extend: {
       spacing:{
-        '700':'1700px',
+        '700':'1400px',
         '400':'800px',
+        '100':'500px',
+        '2000':'2000px',
       }
     },
     fontFamily:{

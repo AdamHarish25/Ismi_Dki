@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="Local/css/bootstrap.css" />
     <link rel="stylesheet" href="Local/css/Output.css" />
     <link rel="stylesheet" href="Local/css/style.css" />
-    <title>Artikel</title>
+    <title>Putra BJ Habibie Lantik Pengurus ISMI DKI Jakarta
+      Periode 2021 - 2026</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="img/Xcon" />
     <style type="text/css">
       .autohide {
@@ -55,12 +56,25 @@
         top: 50%;
         position: absolute;
       }
+      @media only screen and (max-width: 767px) {
+        body {
+          height: 600vh !important;
+          position: relative;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        body {
+          height: 3800px !important;
+          position: relative;
+        }
+      }
     </style>
   </head>
   <body>
     <nav
       class="autohide navbar navbar-expand-lg navbar-light bg-gray-50 shadow-md"
       role="navigation"
+      aria-labelledby="TopNav"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -68,6 +82,8 @@
         </a>
         <button
           class="navbar-toggler border-none shadow-none"
+          onclick="OnOn()"
+          id="ToggleButton"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
@@ -75,7 +91,7 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <i class="fa fa-bars"></i>
+          <i id="targetted" class="fa fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
@@ -103,10 +119,10 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Konten Halaman
+                Kegiatan
               </button>
               <ul
-                class="dropdown-menu rounded-b-xl rounded-t-none animationGrow border-0 py-3 px-4 shadow-md"
+                class="dropdown-menu rounded-b-xl rounded-t-none animationGrow border-0 py-3 px-4 shadow-md fade-down"
                 aria-labelledby="navbarDropdown"
               >
                 <li>
@@ -119,7 +135,7 @@
                 <li>
                   <a
                     class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 mt-2"
-                    href="#Artikel2"
+                    href="Kegiatan2.html"
                     >Artikel 2</a
                   >
                 </li>
@@ -136,10 +152,10 @@
         </div>
       </div>
     </nav>
-    <div id="Artikel1" class="container-fluid h-screen justify-content-center xs:mb-96">
+    <div class="container-fluid h-screen justify-content-center xs:mb-96">
       <div class="row">
         <div class="col-12 h-fit mt-10">
-          <h1 class="text-center xs:text-2xl md:text-4xl font-bold font-Poppins">
+          <h1 id="Artikel1" class="text-center xs:text-2xl md:text-4xl font-bold font-Poppins">
             Putra BJ Habibie Lantik Pengurus ISMI DKI Jakarta <br />
             Periode 2021 - 2026
           </h1>
@@ -193,7 +209,7 @@
     </div>
     <div class="container-fluid h-screen justify-content-center xs:my-96">
       <div class="row">
-        <div id="Artikel2" class="col-12 h-fit flex justify-center py-0">
+        <div class="col-12 h-fit flex justify-center py-0">
           <figure class="figure">
             <img
               src="img/PelantikanIsmiDki2.jpeg"
@@ -235,85 +251,82 @@
             "Sehingga keberlanjutan kebermanfaatan berpihak untuk pengusaha dan
             masyarakat Muslim," terang putra pertama Presiden ke-3 RI BJ
             Habibie.
+            <br><br>
+            <p class="text-center">~~(())~~</p>
           </p>
+        </div>
+        <div class="col-12 h-fit py-3">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled">
+                <a class="page-link xs:px-5 text-xl text-gray-400" aria-label="previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link font-Poppins shadow-none xs:px-5 text-xl" href="Kegiatan.html">1</a></li>
+              <li class="page-item"><a class="page-link text-black font-Poppins shadow-none xs:px-5 text-xl" href="Kegiatan2.html">2</a></li>
+              <!-- <li class="page-item"><a class="page-link text-black font-Poppins shadow-none" href="#">3</a></li> -->
+              <li class="page-item">
+                <a class="page-link text-black shadow-none xs:px-5 text-xl" href="Kegiatan2.html" aria-label="next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+         </div>
+      </div>
+    </div>
+    <br>
+    <div class="container-fluid h-screen justify-content-center xs:mt-48 md:mt-32">
+      <div class="row">
+        <div class="col-12 flex justify-center py-6">
+          <a href="#collapseExample" id="collapsedButton" onclick="show()" data-bs-toggle="collapse" class="rounded-md py-3 xs:px-5 md:px-80 text-gray-600 hover:text-gray-900 hover:font-bold active:text-gray-900 active:font-bold hover:text-3xl 
+          font-Poppins font-bold text-2xl active:text-3xl transform duration-200 text-center">
+            Lainnya &nbsp; <i class="fa fa-angle-down"></i>
+          </a>
+        </div>
+        <div class="collapse xs:px-5 lg:px-52" id="collapseExample">
+          <div class="card card-body rounded-xl border-none overflow-y-hidden">
+            <div class="col-12 h-fit mt-4">
+          <h1
+            class="text-center xs:text-2xl md:text-3xl lg:text-4xl font-bold font-Poppins"
+          >
+            SILABIS ISMI (Aceh) <br> Juni 2021
+          </h1>
+        </div>
+        <div class="row">
+          <div id="Fotoke1" class="col-xs-12 col-md-6 h-fit mt-4">
+            <a class="flex justify-center w-full" href="img/PerkumpulanBapak2.jpeg">
+              <img
+              class="xs:w-4/5 sm:w-2/4 md:w-full rounded-xl"
+              src="img/PerkumpulanBapak2.jpeg"
+              alt=""
+            />
+            </a>
+          </div>
+          <div id="Fotoke2" class="col-xs-12 col-md-6 h-fit mt-4">
+            <a class="flex justify-center w-full" href="img/PerkumpulanAnggota.jpeg">
+              <img
+              class="xs:w-4/5 sm:w-2/4 md:w-full rounded-xl"
+              src="img/PerkumpulanAnggota.jpeg"
+              alt=""
+            />
+            </a>
+          </div>
+        </div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="col-12 xs:invisible md:visible h-fit xs:my-16 md:my-20 text-center">~~))((~~</div>
-    <footer class="bg-black p-20 rounded-t-3xl">
-        <div class="container-fluid">
-          <div class="row justify-content-center">
-            <div class="col-md-12 text-center">
-              <h2 class="font-Poppins text-3xl mb-4">
-                <a href="#" class="text-white">Ismidki.org</a>
-              </h2>
-              <p
-                class="mb-5 uppercase font-bold text-muted text-white no-underline"
-              >
-                <a class="mr-5 transform duration-200 hover:text-white" href="index.html"
-                  >Beranda</a
-                >
-                <a class="mr-5 transform duration-200 hover:text-white" href="index.html#Struktur"
-                  >Struktur</a
-                >
-                <a class="mr-5 transform duration-200 hover:text-white" href="https://www.urbanasia.com/putra-bj-habibie-lantik-pengurus-ismi-dki-jakarta-periode-20212026-U34673"
-                  >Source</a
-                >
-              </p>
-            </div>
-            <div class="row mt-5">
-              <div class="col-md-12 text-center">
-                <p class="mb-8 text-muted text-white">
-                  Copyright &copy;
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  All right reserved
-                  <a
-                    class="no-underline text-white font-Poppins"
-                    href="https://www.ismidki.org"
-                  >
-                    Ismidki.org</a
-                  >
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-    <div
-      title="Back to top"
-      id="uwow"
-      class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path
-          fill-rule="evenodd"
-          d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
-          clip-rule="evenodd"
-        />
-      </svg>
-    </div>
+    <br>
+    <br>
+   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <script>
-      const tombol = document.querySelector("#uwow");
-      tombol.addEventListener("click", function () {
-        window.scrollTo({
-          top: 0,
-          left: 0,
-          behavior: "smooth",
-        });
-      });
-    </script>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
@@ -339,9 +352,101 @@
         }
         // if
       });
+
       $(".navbar-collapse a").click(function () {
         $(".navbar-collapse").collapse("hide");
+        $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
       });
+
+      function show() {
+        $('#collapsedButton').find("i").toggleClass("fa-angle-down fa-angle-up");
+      }
+
+      function OnOn() {
+       $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
+      }
     </script>
   </body>
+  <footer
+      class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0"
+    >
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <h2 class="font-Poppins text-3xl mb-4">
+              <a href="#" class="text-white">Ismidki.org</a>
+            </h2>
+            <p
+              class="mb-5 uppercase font-bold text-muted text-white no-underline"
+            >
+              <a
+                class="mr-3 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                href="index.html"
+                >Beranda</a
+              >
+              <a
+                class="mr-3 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                href="index.html#Struktur"
+                >Struktur</a
+              >
+              <a
+                class="mr-2 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                href="https://www.urbanasia.com/putra-bj-habibie-lantik-pengurus-ismi-dki-jakarta-periode-20212026-U34673"
+                >Source</a
+              >
+              <br>
+              <br class="xs:flex md:hidden">
+              <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
+                Jadi Anggota Kami
+              </a>
+            </p>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All right reserved
+                <a
+                  class="no-underline text-white font-Poppins"
+                  href="https://www.ismidki.org"
+                >
+                  Ismidki.org</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  <div
+  title="Back to top"
+  id="uwow"
+  class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</div>
+<script>
+  const tombol = document.querySelector("#uwow");
+  tombol.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
 </html>

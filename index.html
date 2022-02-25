@@ -68,6 +68,8 @@
         <button
           class="navbar-toggler border-none shadow-none"
           type="button"
+          id="ToggleButton"
+          onclick="OnOn()"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
@@ -100,12 +102,12 @@
                 Profile
               </button>
               <ul
-                class="dropdown-menu shadow-md rounded-md animationGrow border-0 py-3 px-4"
+                class="dropdown-menu shadow-md rounded-md animationGrow border-0 py-3 px-4 fade-down"
                 aria-labelledby="navbarDropdown"
               >
                 <li>
                   <a
-                    class="dropdown-item sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
                     href="#Sejarah"
                     >Sejarah</a
                   >
@@ -113,7 +115,7 @@
                 <br />
                 <li>
                   <a
-                    class="dropdown-item sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
                     href="#VisiMisi"
                     >Visi dan Misi</a
                   >
@@ -153,12 +155,12 @@
           <img class="object-contain opacity-20" src="img/indonesia.svg" alt="" />
           <section class="z-20">
             <img
-              class="absolute xs:w-24 md:w-36 left-2/4 xs:mt-24 md:mt-16 xl:mt-20 2xl:mt-32 top-1/4 transform -translate-x-2/4 -translate-y-2/4"
+              class="absolute xs:w-28 md:w-36 left-2/4 2xl:mt-32 top-1/4 transform -translate-x-2/4 -translate-y-2/4"
               src="img/LogoIsmi.png"
               alt=""
             />
             <h1
-              class="absolute font-bold text-center font-Poppins xs:text-2xl xs:my-10 md:mt-0 md:text-3xl lg:text-4xl left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4"
+              class="absolute font-bold text-center font-Poppins xs:text-xl xs:my-10 md:mt-0 md:text-3xl lg:text-4xl left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4"
             >
               Selamat Datang Di Website Resmi <strong>IsmiDki</strong>
             </h1>
@@ -190,6 +192,7 @@
       <div class="row">
         <div class="col-lg-5 col-sm-12 col-md-12 relative lg:h-full">
           <img
+            data-aos="fade-up"
             draggable="false"
             class="object-cover z-50 xs:w-screen lg:w-10/12 2xl:max-w-3xl xl:top-40 lg:absolute lg:top-52 lg:left-1/3"
             src="img/bla2.jpg"
@@ -197,10 +200,13 @@
           />
         </div>
         <div
-          class="col-lg-7 col-sm-12 col-md-12 relative pt-20 px-10 bg-green-800 h-full"
+          class="col-lg-7 col-sm-12 col-md-12 relative pt-20 px-10 bg-green-800 h-full overflow-hidden"
         >
           <h1
             class="text-center text-gray-50 relative md:containts text-3xl font-round font-semibold mb-10"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            
           >
             Sejarah Organisasi Ismi
           </h1>
@@ -208,6 +214,9 @@
 
           <p
             class="text-left text-gray-50 mb-16 lg:text-base font-normal 2xl:ml-52 lg:ml-28 xl:ml-40 font-Rubik"
+            data-aos="fade-up"
+            data-aos-delay="1200"
+            
           >
             <strong>ISMI</strong> (Ikatan Saudagar Muslim se-Indonesia)
             didirikan oleh 4 ormas besar, <br> yaitu : NU, MUHAMMADIYAH, ICMI dan MUI
@@ -246,11 +255,13 @@
       <div id="VisiMisi" class="row">
         <div class="col-12 h-full relative bg-orange-400 flex justify-center">
           <div
-            class="bg-white xs:w-full sm:w-5/6 lg:w-2/3 h-full flex justify-center border-y-2 border-gray-300"
+            class="bg-white xs:w-full sm:w-5/6 lg:w-2/3 h-full flex justify-center border-y-2 border-gray-300 overflow-x-hidden overflow-y-hidden"
           >
             <div class="row flex justify-start">
               <div class="col-12">
-                <h1 class="text-center font-Rubik text-3xl mt-12">
+                <h1 class="text-center font-Rubik text-3xl mt-12" 
+                data-aos="fade-left"
+                >
                   Visi dan Misi<strong class="font-extrabold font-round">
                     IsmiDki</strong
                   >
@@ -258,31 +269,39 @@
                 <hr class="mb-10 mx-36 mt-2 h-3 opacity-20 bg-black" />
                 <div class="col-12 flex justify-center mt-9">
                   <img
+                    data-aos="fade-right"
+                    data-aos-delay="200"
                     draggable="false"
-                    class="w-2/4 z-30"
+                    class="xs:w-4/6 md:w-2/4 z-30"
                     src="img/Project_44-01.jpg"
                     alt=""
                     title="Created by naki-sama from Vecteezy.com"
                   />
                 </div>
               </div>
-              <div class="col-12 xs:p-16 lg:p-28 -mt-11">
+              <div class="col-12 xs:p-14 lg:p-28"
+              data-aos="fade-down"
+              data-aos-delay="400"
+              >
                 <h1 class="text-center font-round font-bold text-2xl">Visi</h1>
-                <p class="text-center font-Roboto text-lg mt-6 text-muted">
+                <p class="xs:text-justify md:text-center font-Rubik xs:text-base md:text-lg mt-6 text-muted">
                   Visi Kami menjadi wadah persatuan Saudagar Muslim menuju
                   kesuksesan dalam berbisnis dan mencapai kesejahteraan bersama.
                 </p>
               </div>
-              <div class="col-12 xs:p-16 lg:p-36 -mt-20">
+              <div class="col-12 xs:p-16 lg:p-36 -mt-20"
+              data-aos="fade-up"
+              data-aos-delay="600"
+              >
                 <h1 class="text-center font-round font-bold text-2xl">Misi</h1>
-                <p class="text-center font-Roboto text-lg mt-6 text-muted">
+                <p class="xs:text-justify md:text-center font-Rubik xs:text-base md:text-lg mt-6 text-muted">
                   Misi Kami adalah mendorong penumbuhan, pengembangan dan
-                  kemandirian Saudagar Muslim. Meningkatkan sumber daya manusia,
+                  kemandirian Saudagar Muslim. Meningkatkan sumber daya manusia, 
                   daya saing dan peran aktif dalam ekonomi skala nasional,
                   regional dan internasional. Meningkatkan kerjasama dan
                   jaringan usaha Saudagar Muslim se-Indonesia Tagline
                   <strong>ISMI</strong> Merangkai Persatuan, Kesuksesan dan
-                  Kesejahteraan.(Dengan modal sosial yang sangat potensial
+                  Kesejahteraan. Dengan modal sosial yang sangat potensial
                   karena didirikan oleh NU, Muhammadiyah, ICMI dan MUI,
                   seharusnya <strong>ISMI</strong> mampu merangkai persatuan
                   saudagar muslim se-Indonesia.
@@ -317,114 +336,130 @@
                   Jadi bagian dari Kami
                 </h1>
               </div>
-
-              <div class="col-lg-6 col-xs-12 pt-10 px-14">
-                <div class="form-floating mb-3">
-                  <input
-                    type="text"
-                    class="form-control shadow-blue-400"
-                    id="Name"
-                    placeholder="John Doe"
-                  />
-                  <label for="Name">Nama</label>
+              <form action="Submit.php" method="post" class="row g-3">
+                <div class="col-lg-6 col-xs-12 pt-10 px-14">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control shadow-blue-400"
+                      id="Name"
+                      name="Nama"
+                      placeholder="John Doe"
+                      required
+                    />
+                    <label for="Name">Nama</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-6 col-xs-12 pt-10 px-14">
-                <div class="form-floating mb-3">
-                  <input
-                    type="email"
-                    class="form-control shadow-blue-400"
-                    id="Email"
-                    placeholder="Example@gmail.com"
-                  />
-                  <label for="Email">E-mail</label>
+                <div class="col-lg-6 col-xs-12 pt-10 px-14">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control shadow-blue-400"
+                      id="Email"
+                      name="email"
+                      placeholder="Example@gmail.com"
+                      required
+                    />
+                    <label for="Email">E-mail</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-5 col-xs-12 py-4 px-14">
-                <form class="form-floating">
-                  <input
-                    type="tel"
-                    class="form-control"
-                    id="Nomor"
-                    placeholder="Number"
-                    pattern="ex:0811222333444"
-                  />
-                  <label for="Nomor">Nomor Hp</label>
-                </form>
-              </div>
-              <div class="col-lg-7 col-xs-12 py-4 px-14">
-                <form class="form-floating date">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="tgl-lahir"
-                    placeholder="Number"
-                  />
-                  <label for="tgl-lahir">Tanggal Lahir</label>
-                </form>
-              </div>
-              <div class="col-12 pb-10 px-14">
-                <div class="form-floating ">
-                  <textarea
-                    class="form-control h-36"
-                    placeholder="Alamat"
-                    id="Address"
-                  ></textarea>
-                  <label for="Address">Alamat</label>
+                <div class="col-lg-5 col-xs-12 py-4 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      class="form-control"
+                      id="Nomor"
+                      name="phone"
+                      placeholder="Number"
+                      pattern="ex:0811222333444"
+                      required
+                    />
+                    <label for="Nomor">Nomor Hp</label>
+                  </div>
                 </div>
-              </div>
-              <div class="col-lg-6 col-xs-12 pb-10 px-14">
-                <form class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="Company"
-                    placeholder="Nama Perusahaan"
-                  />
-                  <label for="Company">Nama Perusahaan</label>
-                </form>
-              </div>
-              <div class="col-lg-7 col-xs-12 pb-10 px-14">
-                <form class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="productsName"
-                    placeholder="Nama Produk"
-                  />
-                  <label for="productsName">Nama Produk</label>
-                </form>
-              </div>
-              <div class="col-lg-5 col-xs-12 pb-10 px-14">
-                <form class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="products"
-                    placeholder="Jenis Produk"
-                  />
-                  <label for="products">Jenis Produk</label>
-                </form>
-              </div>
-              <div class="col-12 pb-10 px-14">
-                <form class="form-floating">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="Website"
-                    placeholder="Website Perusahaan"
-                    value="https://"
-                  />
-                  <label for="Website">Website Perusahaan</label>
-                </form>
-              </div>
-              <div class="col-12 pb-10 px-14 flex justify-center">
-                <button
-                  class="xs:px-20 md:px-40 py-3 rounded-lg bg-gray-100 text-black font-bold hover:ring-2 hover:ring-blue-300 transform duration-200 hover:text-lg focus:ring-4 focus:ring-blue-300 focus:text-lg"
-                >
-                  Submit
-                </button>
-              </div>
+                <div class="col-lg-7 col-xs-12 py-4 px-14">
+                  <div class="form-floating date">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="tgl-lahir"
+                      name="date"
+                      placeholder="Number"
+                      required
+                    />
+                    <label for="tgl-lahir">Tanggal Lahir</label>
+                  </div>
+                </div>
+                <div class="col-12 pb-10 px-14">
+                  <div class="form-floating ">
+                    <textarea
+                      class="form-control h-36"
+                      placeholder="Alamat"
+                      id="Address"
+                      name="Alamat"
+                    ></textarea>
+                    <label for="Address">Alamat</label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xs-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Company"
+                      name="Perusahaan"
+                      placeholder="Nama Perusahaan"
+                    />
+                    <label for="Company">Nama Perusahaan</label>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-xs-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="productsName"
+                      name="Nproduk"
+                      placeholder="Nama Produk"
+                    />
+                    <label for="productsName">Nama Produk</label>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-xs-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="products"
+                      name="Jproduk"
+                      placeholder="Jenis Produk"
+                    />
+                    <label for="products">Jenis Produk</label>
+                  </div>
+                </div>
+                <div class="col-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="Website"
+                      name="Webb"
+                      placeholder="Website Perusahaan"
+                      value="https://"
+                    />
+                    <label for="Website">Website Perusahaan</label>
+                  </div>
+                </div>
+                <div class="col-12 pb-10 px-14 flex justify-center">
+                  <button
+                    class="xs:px-20 md:px-40 py-3 rounded-lg bg-gray-100 text-black font-bold hover:ring-2 hover:ring-blue-300 transform duration-200 hover:text-lg focus:ring-4 focus:ring-blue-300 focus:text-lg"
+                    type="submit"
+                    name="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -440,24 +475,25 @@
             <p
               class="mb-5 uppercase font-bold text-muted text-white no-underline"
             >
-              <a class="mr-5 transform duration-200 hover:text-white" href="#"
+              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#"
                 >Beranda</a
               >
-              <a class="mr-5 transform duration-200 hover:text-white" href="#Struktur"
+              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Struktur"
                 >Struktur</a
               >
-              <a class="mr-5 transform duration-200 hover:text-white" href="#Sejarah"
+              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
                 >Sejarah</a
               >
-              <br class="md:hidden">
-              <a class="mr-5 transform duration-200 hover:text-white" href="#DaftarAnggota"
-                >Jadi Anggota Kami</a
-              >
+              <br>
+              <br class="xs:flex md:hidden">
+              <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
+                Jadi Anggota Kami
+              </a>
             </p>
           </div>
           <div class="row mt-5">
             <div class="col-md-12 text-center">
-              <p class="mb-8 text-muted text-white">
+              <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
                 Copyright &copy;
                 <script>
                   document.write(new Date().getFullYear());
@@ -530,6 +566,7 @@
       });
       $(".navbar-collapse a").click(function () {
         $(".navbar-collapse").collapse("hide");
+        $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
       });
 
       $(function () {
@@ -539,6 +576,9 @@
           autoclose: true,
         });
       });
+      function OnOn() {
+       $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
+      }
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    
@@ -550,73 +590,5 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <!-- <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-app.js";
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-auth.js";
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.7/firebase-database.js";
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      const firebaseConfig = {
-        apiKey: "AIzaSyAXirwfA8hl0PJZE9UVvF3JT64HomY-iPs",
-        authDomain: "ismidki.firebaseapp.com",
-        projectId: "ismidki",
-        storageBucket: "ismidki.appspot.com",
-        messagingSenderId: "800667274568",
-        appId: "1:800667274568:web:7b1e601b69480f6f5db77d",
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const auth = firebase.auth();
-      const database = firebase.database();
-      function register() {
-        var email = document.getElementById("Email").value;
-        var fullName = document.getElementById("Name").value;
-        var NoHp = document.getElementById("Nomor").value;
-        var birth = document.getElementById("tgl-lahir").value;
-        var addr = document.getElementById("Address").value;
-        var comp = document.getElementById("Company").value;
-        var pName = document.getElementById("productsName").value;
-        var products = document.getElementById("products").value;
-        var wb = document.getElementById("Website").value;
-
-        if (validate_email(email) == false) {
-          alert("Email yang anda masukkan salah.");
-          return;
-        }
-        if (validate_field(fullName) == false || validate_field(NoHp) == false || validate_field(birth) == false || validate_field(addr) == false || validate_field(comp) == false || validate_field(pName) == false || validate_field(products) == false || validate_field(wb) == false) {
-          alert("Harus diisi!");
-          return;
-        }
-
-        auth.createUserWithEmailAndPassword(email).then(function () {
-          
-        })
-      }
-
-      function validate_email(email) {
-        expression = /^[^@]+@\w+(\.\w+)+\w$/;
-        if (expression.test(email) == true) {
-          return true;
-        } else {
-          return false;
-        }
-      }
-
-      function validate_field(field) {
-        if (field == null) {
-          return false;
-        }
-
-        if (field.length <= 0) {
-          return false;
-        } else {
-          return true;
-        }
-      }
-    </script> -->
   </body>
 </html>
