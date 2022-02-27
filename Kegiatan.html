@@ -58,13 +58,13 @@
       }
       @media only screen and (max-width: 767px) {
         body {
-          height: 600vh !important;
+          height: fit-content !important;
           position: relative;
         }
       }
       @media only screen and (min-width: 768px) {
         body {
-          height: 3800px !important;
+          height: fit-content !important;
           position: relative;
         }
       }
@@ -106,7 +106,7 @@
             <li class="nav-item ml-2">
               <a
                 class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
-                href="#"
+                href="Struktur.html"
                 >Struktur</a
               >
             </li>
@@ -281,26 +281,19 @@
       </div>
     </div>
     <br>
-    <div class="container-fluid h-screen justify-content-center xs:mt-48 md:mt-32">
+    <div class="container-fluid h-full justify-content-center mt-60 pb-96">
       <div class="row">
-        <div class="col-12 flex justify-center py-6">
-          <a href="#collapseExample" id="collapsedButton" onclick="show()" data-bs-toggle="collapse" class="rounded-md py-3 xs:px-5 md:px-80 text-gray-600 hover:text-gray-900 hover:font-bold active:text-gray-900 active:font-bold hover:text-3xl 
-          font-Poppins font-bold text-2xl active:text-3xl transform duration-200 text-center">
-            Lainnya &nbsp; <i class="fa fa-angle-down"></i>
-          </a>
-        </div>
-        <div class="collapse xs:px-5 lg:px-52" id="collapseExample">
-          <div class="card card-body rounded-xl border-none overflow-y-hidden">
-            <div class="col-12 h-fit mt-4">
+        <div class="col-12 h-fit mt-4">
           <h1
-            class="text-center xs:text-2xl md:text-3xl lg:text-4xl font-bold font-Poppins"
+            class="text-center xs:text-2xl md:text-3xl font-bold font-Poppins"
           >
-            SILABIS ISMI (Aceh) <br> Juni 2021
+            SILABIS ISMI (Aceh) <br class="md:hidden xs:flex">Juni 2021
           </h1>
         </div>
+       <div class="col-12 mt-20 mb-60">
         <div class="row">
-          <div id="Fotoke1" class="col-xs-12 col-md-6 h-fit mt-4">
-            <a class="flex justify-center w-full" href="img/PerkumpulanBapak2.jpeg">
+          <div id="Fotoke1" class="col-xs-12 col-md-6 h-fit flex md:justify-end mt-4">
+            <a class="flex justify-center xs:w-full md:w-4/6" href="img/PerkumpulanBapak2.jpeg">
               <img
               class="xs:w-4/5 sm:w-2/4 md:w-full rounded-xl"
               src="img/PerkumpulanBapak2.jpeg"
@@ -308,8 +301,8 @@
             />
             </a>
           </div>
-          <div id="Fotoke2" class="col-xs-12 col-md-6 h-fit mt-4">
-            <a class="flex justify-center w-full" href="img/PerkumpulanAnggota.jpeg">
+          <div id="Fotoke2" class="col-xs-12 col-md-6 h-fit flex md:justify-start mt-4">
+            <a class="flex justify-center xs:w-full md:w-4/6" href="img/PerkumpulanAnggota.jpeg">
               <img
               class="xs:w-4/5 sm:w-2/4 md:w-full rounded-xl"
               src="img/PerkumpulanAnggota.jpeg"
@@ -318,13 +311,9 @@
             </a>
           </div>
         </div>
-          </div>
-        </div>
+       </div>
       </div>
     </div>
-    <br>
-    <br>
-   
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
@@ -370,8 +359,7 @@
        $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
       }
     </script>
-  </body>
-  <footer
+      <footer
       class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0"
     >
       <div class="container-fluid">
@@ -390,7 +378,7 @@
               >
               <a
                 class="mr-3 transform xs:text-sm md:text-base duration-200 hover:text-white"
-                href="index.html#Struktur"
+                href="Struktur.html"
                 >Struktur</a
               >
               <a
@@ -414,6 +402,7 @@
         </div>
       </div>
     </footer>
+  </body>
   <div
   title="Back to top"
   id="uwow"

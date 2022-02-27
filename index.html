@@ -57,6 +57,18 @@
         top: 50%;
         position: absolute;
       }
+      @media only screen and (max-width: 767px) {
+        body {
+          height: fit-content !important;
+          position: relative;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        body {
+          height: fit-content !important;
+          position: relative;
+        }
+      }
     </style>
   </head>
   <body>
@@ -125,7 +137,7 @@
             <li class="nav-item ml-2">
               <a
                 class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
-                href="#Struktur"
+                href="Struktur.html"
                 >Struktur</a
               >
             </li>
@@ -312,23 +324,11 @@
         </div>
       </div>
     </div>
-    <!-- <div id="Struktur" class="container-fluid h-full mb-32">
-      <div class="row">
-        <div class="col-12 h-4 text-center font-bold font-Poppins py-10">
-          <h1 class="text-black text-2xl">Struktur Ismi Dki</h1>
-        </div>
-        <div class="col-12 flex justify-center">
-          <div class="col-6">
-            <img class="object-contain w-auto" src="img/StrukturIsmi Dki2.png" alt="">
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <div id="DaftarAnggota" class="container-fluid h-full mb-32">
+    <div id="DaftarAnggota" class="container-fluid h-full pb-96">
       <div class="row">
         <div class="col-12 flex justify-center h-full bg-white">
           <div
-            class="xs:w-full md:w-9/12 h-full shadow-lg shadow-black my-40 rounded-xl bg-green-300 flex justify-center"
+            class="xs:w-full md:w-9/12 h-full shadow-lg shadow-black my-40 rounded-xl bg-green-300 flex justify-center overflow-x-hidden"
           >
             <div class="row py-5">
               <div class="col-12">
@@ -464,71 +464,7 @@
           </div>
         </div>
       </div>
-    </div>
-    <footer class="bg-black p-20 rounded-t-3xl">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-md-12 text-center">
-            <h2 class="font-Poppins text-3xl mb-4">
-              <a href="#" class="text-white">Ismidki.org</a>
-            </h2>
-            <p
-              class="mb-5 uppercase font-bold text-muted text-white no-underline"
-            >
-              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#"
-                >Beranda</a
-              >
-              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Struktur"
-                >Struktur</a
-              >
-              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
-                >Sejarah</a
-              >
-              <br class="xs:flex md:hidden">
-              <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
-                Daftar Anggota
-              </a>
-            </p>
-          </div>
-          <div class="row mt-5">
-            <div class="col-md-12 text-center">
-              <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
-                Powered by : <a class="hover:text-white" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div
-    title="Back to top"
-    id="uwow"
-    class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
-      viewBox="0 0 20 20"
-      fill="currentColor"
-    >
-      <path
-        fill-rule="evenodd"
-        d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
-        clip-rule="evenodd"
-      />
-    </svg>
-  </div>
-  <script>
-    const tombol = document.querySelector("#uwow");
-    tombol.addEventListener("click", function () {
-      window.scrollTo({
-        top: 0,
-        left: 0,
-        behavior: "smooth",
-      });
-    });
-  </script>
- 
+    </div> 
     <script type="text/javascript">
       document.addEventListener("DOMContentLoaded", function () {
         el_autohide = document.querySelector(".autohide");
@@ -579,5 +515,69 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <footer class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <h2 class="font-Poppins text-3xl mb-4">
+              <a href="#" class="text-white">Ismidki.org</a>
+            </h2>
+            <p
+              class="mb-5 uppercase font-bold text-muted text-white no-underline"
+            >
+              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#"
+                >Beranda</a
+              >
+              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="Struktur.html"
+                >Struktur</a
+              >
+              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
+                >Sejarah</a
+              >
+              <br class="xs:flex md:hidden">
+              <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
+                Daftar Anggota
+              </a>
+            </p>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
+                Powered by : <a class="hover:text-white" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
+  <div
+  title="Back to top"
+  id="uwow"
+  class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</div>
+<script>
+  const tombol = document.querySelector("#uwow");
+  tombol.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  });
+</script>
+
 </html>
