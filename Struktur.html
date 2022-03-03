@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head contenteditable="false">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,150 +26,12 @@
     <link rel="stylesheet" href="Local/css/style.css" />
     <title>Struktur Ismi Dki</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon">
-    <style type="text/css">
-      .autohide {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-      }
-      .scrolled-down {
-        transform: translateY(-100%);
-        transition: all 0.3s ease-in-out;
-      }
-      .scrolled-up {
-        transform: translateY(0);
-        transition: all 0.3s ease-in-out;
-      }
-      .activel {
-        font-weight: bold;
-        color: blue;
-      }
-      .containts::before {
-        content: "";
-        display: block;
-        width: 130px;
-        height: 2px;
-        background: white;
-        left: 30px;
-        opacity: 20;
-        top: 50%;
-        position: absolute;
-      }
-      @media only screen and (max-width: 767px) {
-        body {
-          height: fit-content !important;
-          position: relative;
-        }
-        .img-magnifier-glass {
-            position: absolute;
-            border: 3px solid #000;
-            border-radius: 50%;
-            cursor: none;
-            /*Set the size of the magnifier glass:*/
-            width: 90px;
-            height: 90px;
-        }
-      }
-      @media only screen and (min-width: 768px) {
-        body {
-          height: fit-content !important;
-          position: relative;
-        }
-        .img-magnifier-glass {
-            position: absolute;
-            border: 3px solid #000;
-            border-radius: 50%;
-            cursor: none;
-            /*Set the size of the magnifier glass:*/
-            width: 150px;
-            height: 150px;
-        }
-      }
-      * {box-sizing: border-box;}
-
-        .img-magnifier-container {
-            position:relative;
-        }
-
-       
-    </style>
-    <script>
-         function magnify(imgID, zoom) {
-  var img, glass, w, h, bw;
-  img = document.getElementById(imgID);
-  /*create magnifier glass:*/
-  glass = document.createElement("DIV");
-  glass.setAttribute("class", "img-magnifier-glass");
-  /*insert magnifier glass:*/
-  img.parentElement.insertBefore(glass, img);
-  /*set background properties for the magnifier glass:*/
-  glass.style.backgroundImage = "url('" + img.src + "')";
-  glass.style.backgroundRepeat = "no-repeat";
-  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
-  bw = 3;
-  w = glass.offsetWidth / 2;
-  h = glass.offsetHeight / 2;
-  /*execute a function when someone moves the magnifier glass over the image:*/
-  glass.addEventListener("mousemove", moveMagnifier); 
-  img.addEventListener("mousemove", moveMagnifier);
-  /*and also for touch screens:*/
-  glass.addEventListener("touchmove", moveMagnifier);
-  img.addEventListener("touchmove", moveMagnifier);
-  function moveMagnifier(e) {
-    var pos, x, y;
-    /*prevent any other actions that may occur when moving over the image*/
-    e.preventDefault();
-    /*get the cursor's x and y positions:*/
-    pos = getCursorPos(e);
-    x = pos.x;
-    y = pos.y;
-    /*prevent the magnifier glass from being positioned outside the image:*/
-    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
-    if (x < w / zoom) {x = w / zoom;}
-    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
-    if (y < h / zoom) {y = h / zoom;}
-    /*set the position of the magnifier glass:*/
-    glass.style.left = (x - w) + "px";
-    glass.style.top = (y - h) + "px";
-    /*display what the magnifier glass "sees":*/
-    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
-  }
-  function getCursorPos(e) {
-    var a, x = 0, y = 0;
-    e = e || window.event;
-    /*get the x and y positions of the image:*/
-    a = img.getBoundingClientRect();
-    /*calculate the cursor's x and y coordinates, relative to the image:*/
-    x = e.pageX - a.left;
-    y = e.pageY - a.top;
-    /*consider any page scrolling:*/
-    x = x - window.pageXOffset;
-    y = y - window.pageYOffset;
-    return {x : x, y : y};
-  }
-  jQuery.fn.visible = function() {
-      return this.css('opacity', '1');
-  };
-  jQuery.fn.invisible = function() {
-      return this.css('opacity', '0');
-  };
-
-  $(glass).on({
-      mousemove(){
-        $(this).visible();
-      },
-      mouseleave(){
-          $(this).invisible();
-      },
-  });
-}
-    </script>
+    <link rel="stylesheet" href="Local/css/Struktur.css">
+    <script src="Local/js/Struktur2.js"></script>
 </head>
-<body>
+<body contenteditable="false">
     <nav
-      class="autohide navbar navbar-expand-lg navbar-light bg-gray-50 shadow-md"
+      class="autohide navbar navbar-expand-lg navbar-light bg-white shadow-md"
       role="navigation"
       aria-labelledby="TopNav"
     >
@@ -194,7 +56,7 @@
           <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
             <li class="nav-item ml-2">
               <a
-                class="nav-link activel border-b-2 border-transparent px-4 py-3 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link activel border-b-2 border-transparent px-4 py-6 md:hover:border-blue-600 md:hover:text-gray-700"
                 aria-current="page"
                 href="index.html"
                 >Beranda</a
@@ -202,14 +64,14 @@
             </li>
             <li class="nav-item ml-2">
               <a
-                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                 href="Kegiatan.html"
                 >Kegiatan</a
               >
             </li>
             <!-- <li class="nav-item dropdown ml-2">
               <button
-                class="nav-link dropdown-toggle border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:text-gray-700"
+                class="nav-link dropdown-toggle border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -240,7 +102,7 @@
             </li> -->
             <li class="nav-item ml-2">
                 <a
-                  class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                  class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                   href="index.html#DaftarAnggota"
                   >Daftar Anggota</a
                 >
@@ -260,7 +122,7 @@
                     <div class="card-body">
                        <figure class="figure">
                                 <div class="img-magnifier-container">
-                                    <img class="xs:w-full h-full d-block mx-auto" id="myimage" src="img/DanLagi.svg" alt="">
+                                    <img class="xs:w-full h-full d-block mx-auto" id="myimage" src="img/StrukturOriginal.svg" alt="">
                                 </div>
                             <figcaption class="figure-caption text-center font-Poppins xs:text-xs md:text-base">
                                 Untuk melihat lebih jelas, silahkan klik bagian dari foto tersebut. <br>
@@ -272,47 +134,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function () {
-          el_autohide = document.querySelector(".autohide");
-  
-          // add padding-top to body (if necessary)
-          navbar_height = document.querySelector(".navbar").offsetHeight;
-          document.body.style.paddingTop = navbar_height + "px";
-          if (el_autohide) {
-            var last_scroll_top = 0;
-            window.addEventListener("scroll", function () {
-              let scroll_top = window.scrollY;
-              if (scroll_top < last_scroll_top) {
-                el_autohide.classList.remove("scrolled-down");
-                el_autohide.classList.add("scrolled-up");
-              } else {
-                el_autohide.classList.remove("scrolled-up");
-                el_autohide.classList.add("scrolled-down");
-              }
-              last_scroll_top = scroll_top;
-            });
-            // window.addEventListener
-          }
-          // if
-        });
-        $(".navbar-collapse a").click(function () {
-          $(".navbar-collapse").collapse("hide");
-          $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
-        });
-  
-        $(function () {
-          $("#tgl-lahir").datepicker({
-            calendarWeeks: true,
-            todayHighlight: true,
-            autoclose: true,
-          });
-        });
-        function OnOn() {
-         $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
-        }
-        magnify("myimage", 3);
-      </script>
+    <script src="Local/js/Struktur.js"></script>
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
      
       <script>
@@ -333,17 +155,17 @@
               <p
                 class="mb-5 uppercase font-bold text-muted text-white no-underline"
               >
-                <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#"
+                <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#"
                   >Beranda</a
                 >
-                <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Struktur"
+                <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#Struktur"
                   >Struktur</a
                 >
-                <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
+                <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
                   >Sejarah</a
                 >
                 <br class="xs:flex md:hidden">
-                <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
+                <a href="index.html#DaftarAnggota" class="mr-3 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white">
                   Daftar Anggota
                 </a>
               </p>
@@ -351,7 +173,7 @@
             <div class="row mt-5">
               <div class="col-md-12 text-center">
                 <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
-                  Powered by : <a class="hover:text-white" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
+                  Powered by : <a class="hover:text-white text-muted" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
                 </p>
               </div>
             </div>
@@ -377,14 +199,5 @@
     />
   </svg>
 </div>
-<script>
-  const tombol = document.querySelector("#uwow");
-  tombol.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  });
-</script>
+<script src="Local/js/javascript1.js"></script>
 </html>

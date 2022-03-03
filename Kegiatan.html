@@ -25,54 +25,11 @@
     <title>Putra BJ Habibie Lantik Pengurus ISMI DKI Jakarta
       Periode 2021 - 2026</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="img/Xcon" />
-    <style type="text/css">
-      .autohide {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-      }
-      .scrolled-down {
-        transform: translateY(-100%);
-        transition: all 0.3s ease-in-out;
-      }
-      .scrolled-up {
-        transform: translateY(0);
-        transition: all 0.3s ease-in-out;
-      }
-      .activel {
-        font-weight: bold;
-        color: blue;
-      }
-      .containts::before {
-        content: "";
-        display: block;
-        width: 130px;
-        height: 2px;
-        background: white;
-        left: 30px;
-        opacity: 20;
-        top: 50%;
-        position: absolute;
-      }
-      @media only screen and (max-width: 767px) {
-        body {
-          height: fit-content !important;
-          position: relative;
-        }
-      }
-      @media only screen and (min-width: 768px) {
-        body {
-          height: fit-content !important;
-          position: relative;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="Local/css/Kegiatan.css">
   </head>
   <body>
     <nav
-      class="autohide navbar navbar-expand-lg navbar-light bg-gray-50 shadow-md"
+      class="autohide navbar navbar-expand-lg navbar-light bg-white shadow-md"
       role="navigation"
       aria-labelledby="TopNav"
     >
@@ -97,7 +54,7 @@
           <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
             <li class="nav-item ml-2">
               <a
-                class="nav-link activel border-b-2 border-transparent px-4 py-3 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link activel border-b-2 border-transparent px-4 py-6 md:hover:border-blue-600 md:hover:text-gray-700"
                 aria-current="page"
                 href="index.html"
                 >Beranda</a
@@ -105,14 +62,14 @@
             </li>
             <li class="nav-item ml-2">
               <a
-                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                 href="Struktur.html"
                 >Struktur</a
               >
             </li>
             <li class="nav-item dropdown ml-2">
               <button
-                class="nav-link dropdown-toggle border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:text-gray-700"
+                class="nav-link dropdown-toggle border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700"
                 href="#"
                 id="navbarDropdown"
                 role="button"
@@ -143,7 +100,7 @@
             </li>
             <li class="nav-item ml-2">
                 <a
-                  class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                  class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                   href="index.html#DaftarAnggota"
                   >Daftar Anggota</a
                 >
@@ -321,44 +278,7 @@
     ></script>
    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        el_autohide = document.querySelector(".autohide");
-
-        // add padding-top to body (if necessary)
-        navbar_height = document.querySelector(".navbar").offsetHeight;
-        document.body.style.paddingTop = navbar_height + "px";
-        if (el_autohide) {
-          var last_scroll_top = 0;
-          window.addEventListener("scroll", function () {
-            let scroll_top = window.scrollY;
-            if (scroll_top < last_scroll_top) {
-              el_autohide.classList.remove("scrolled-down");
-              el_autohide.classList.add("scrolled-up");
-            } else {
-              el_autohide.classList.remove("scrolled-up");
-              el_autohide.classList.add("scrolled-down");
-            }
-            last_scroll_top = scroll_top;
-          });
-          // window.addEventListener
-        }
-        // if
-      });
-
-      $(".navbar-collapse a").click(function () {
-        $(".navbar-collapse").collapse("hide");
-        $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
-      });
-
-      function show() {
-        $('#collapsedButton').find("i").toggleClass("fa-angle-down fa-angle-up");
-      }
-
-      function OnOn() {
-       $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
-      }
-    </script>
+    <script src="Local/js/javascript2.js"></script>
       <footer
       class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0"
     >
@@ -372,22 +292,22 @@
               class="mb-5 uppercase font-bold text-muted text-white no-underline"
             >
               <a
-                class="mr-3 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                class="mr-3 transform text-muted xs:text-sm md:text-base duration-200 hover:text-white"
                 href="index.html"
                 >Beranda</a
               >
               <a
-                class="mr-3 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                class="mr-3 transform text-muted xs:text-sm md:text-base duration-200 hover:text-white"
                 href="Struktur.html"
                 >Struktur</a
               >
               <a
-                class="mr-2 transform xs:text-sm md:text-base duration-200 hover:text-white"
+                class="mr-2 transform text-muted xs:text-sm md:text-base duration-200 hover:text-white"
                 href="https://www.urbanasia.com/putra-bj-habibie-lantik-pengurus-ismi-dki-jakarta-periode-20212026-U34673"
                 >Source</a
               >
               <br class="xs:flex md:hidden">
-              <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
+              <a href="index.html#DaftarAnggota" class="mr-3 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white">
                 Daftar Anggota
               </a>
             </p>
@@ -395,7 +315,7 @@
           <div class="row mt-5">
             <div class="col-md-12 text-center">
               <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
-                Powered by : <a class="hover:text-white" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
+                Powered by : <a class="hover:text-white text-muted" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
               </p>
             </div>
           </div>
@@ -421,14 +341,5 @@
     />
   </svg>
 </div>
-<script>
-  const tombol = document.querySelector("#uwow");
-  tombol.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  });
-</script>
+<script src="Local/js/javascript1.js"></script>
 </html>

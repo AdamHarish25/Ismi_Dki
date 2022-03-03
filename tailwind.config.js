@@ -1,7 +1,16 @@
 module.exports = {
+  important: true,
   content: [
     '*.html'
   ],
+  variants: {
+    extend: {
+      visibility: ["group-hover"],
+      visibility: ["group-active"],
+      width: ['hover'],
+      animation: ['group-hover'],
+    },
+   },
   theme: {
     screens:{
       'xs': '0px',
@@ -12,6 +21,16 @@ module.exports = {
       '2xl': '2036px',
     },
     extend: {
+      keyframes: {
+        visibleDelay: {
+          '0%' : { visibility: 'hidden', opacity: '0'},
+          '25%' : { visibility: 'hidden', opacity: '0'},
+          '100%' : { visibility: 'visible', opacity: '100%'},
+        }
+      },
+      animation: {
+        visibleDelay: 'visibleDelay 1s ease forwards',
+      },
       spacing:{
         '700':'1400px',
         '400':'800px',

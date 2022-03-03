@@ -26,50 +26,7 @@
     <link rel="stylesheet" href="Local/css/style.css" />
     <title>Ismi Dki</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon">
-    <style type="text/css">
-      .autohide {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-      }
-      .scrolled-down {
-        transform: translateY(-100%);
-        transition: all 0.3s ease-in-out;
-      }
-      .scrolled-up {
-        transform: translateY(0);
-        transition: all 0.3s ease-in-out;
-      }
-      .activel {
-        font-weight: bold;
-        color: blue;
-      }
-      .containts::before {
-        content: "";
-        display: block;
-        width: 130px;
-        height: 2px;
-        background: white;
-        left: 30px;
-        opacity: 20;
-        top: 50%;
-        position: absolute;
-      }
-      @media only screen and (max-width: 767px) {
-        body {
-          height: fit-content !important;
-          position: relative;
-        }
-      }
-      @media only screen and (min-width: 768px) {
-        body {
-          height: fit-content !important;
-          position: relative;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="Local/css/Index.css">
   </head>
   <body>
     <nav class="autohide navbar navbar-expand-lg navbar-light bg-white" role="navigation">
@@ -97,7 +54,7 @@
           <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
             <li class="nav-item ml-2">
               <a
-                class="nav-link activel border-b-2 border-transparent px-4 py-3 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link activel border-b-2 border-transparent px-4 py-6 md:hover:border-blue-600 md:hover:text-gray-700"
                 aria-current="page"
                 href="#"
                 >Beranda</a
@@ -105,7 +62,7 @@
             </li>
             <li class="nav-item dropdown ml-2">
               <button
-                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:text-gray-700 dropdown-toggle"
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700 dropdown-toggle"
                 id="navbarDropdown"
                 type="button"
                 data-bs-toggle="dropdown"
@@ -136,21 +93,21 @@
             </li>
             <li class="nav-item ml-2">
               <a
-                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                 href="Struktur.html"
                 >Struktur</a
               >
             </li>
             <li class="nav-item ml-2">
               <a
-                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                 href="#DaftarAnggota"
                 >Daftar Anggota</a
               >
             </li>
             <li class="nav-item ml-2">
               <a
-                class="nav-link border-b-2 border-transparent px-4 py-3 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                 href="Kegiatan.html"
                 >Kegiatan</a
               >
@@ -203,13 +160,15 @@
     >
       <div class="row">
         <div class="col-lg-5 col-sm-12 col-md-12 relative lg:h-full">
+         <a class="z-50 lg:absolute lg:top-52 lg:left-1/3 xl:top-40 xs:w-screen lg:w-10/12 2xl:max-w-3xl" href="">
           <img
-            data-aos="fade-up"
-            draggable="false"
-            class="object-cover z-50 xs:w-screen lg:w-10/12 2xl:max-w-3xl xl:top-40 lg:absolute lg:top-52 lg:left-1/3"
-            src="img/bla2.jpg"
-            alt=""
-          />
+          data-aos="fade-up"
+          draggable="false"
+          class="object-cover z-50 xs:w-screen lg:w-10/12 2xl:max-w-3xl xs:rounded-none md:rounded-lg"
+          src="img/IsmiDkiBanner.png"
+          alt=""
+        />
+         </a>
         </div>
         <div
           class="col-lg-7 col-sm-12 col-md-12 relative pt-20 px-10 bg-green-800 h-full overflow-hidden"
@@ -278,7 +237,7 @@
                     Ismi Dki</strong
                   >
                 </h1>
-                <hr class="mb-10 mx-36 mt-2 h-3 opacity-20 bg-black" />
+                <hr class="mb-10 mx-36 mt-2 h-0.5 opacity-20 bg-black" />
                 <div class="col-12 flex justify-center mt-9">
                   <img
                     data-aos="fade-right"
@@ -328,15 +287,15 @@
       <div class="row">
         <div class="col-12 flex justify-center h-full bg-white">
           <div
-            class="xs:w-full md:w-9/12 h-full shadow-lg shadow-black my-40 rounded-xl bg-green-300 flex justify-center overflow-x-hidden"
+            class="xs:w-full md:w-9/12 h-full shadow-md shadow-gray-400 my-40 rounded-xl bg-green-300 flex justify-center overflow-x-hidden"
           >
-            <div class="row py-5">
-              <div class="col-12">
+            <div class="row py-6">
+              <div class="col-12 mt-5">
                 <h1 class="text-center text-2xl font-bold font-round">
                   Jadi bagian dari Kami
                 </h1>
               </div>
-              <form action="Submit.php" method="post" class="row g-3">
+              <form action="Submit.php" method="POST" class="row g-3">
                 <div class="col-lg-6 col-xs-12 pt-10 px-14">
                   <div class="form-floating mb-3">
                     <input
@@ -384,7 +343,10 @@
                       class="form-control"
                       id="tgl-lahir"
                       name="date"
-                      placeholder="Number"
+                      placeholder="date"
+                      autocomplete="off"
+                      spellcheck="false"
+                      autocorrect="off"
                       required
                     />
                     <label for="tgl-lahir">Tanggal Lahir</label>
@@ -465,48 +427,8 @@
         </div>
       </div>
     </div> 
-    <script type="text/javascript">
-      document.addEventListener("DOMContentLoaded", function () {
-        el_autohide = document.querySelector(".autohide");
-
-        // add padding-top to body (if necessary)
-        navbar_height = document.querySelector(".navbar").offsetHeight;
-        document.body.style.paddingTop = navbar_height + "px";
-        if (el_autohide) {
-          var last_scroll_top = 0;
-          window.addEventListener("scroll", function () {
-            let scroll_top = window.scrollY;
-            if (scroll_top < last_scroll_top) {
-              el_autohide.classList.remove("scrolled-down");
-              el_autohide.classList.add("scrolled-up");
-            } else {
-              el_autohide.classList.remove("scrolled-up");
-              el_autohide.classList.add("scrolled-down");
-            }
-            last_scroll_top = scroll_top;
-          });
-          // window.addEventListener
-        }
-        // if
-      });
-      $(".navbar-collapse a").click(function () {
-        $(".navbar-collapse").collapse("hide");
-        $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
-      });
-
-      $(function () {
-        $("#tgl-lahir").datepicker({
-          calendarWeeks: true,
-          todayHighlight: true,
-          autoclose: true,
-        });
-      });
-      function OnOn() {
-       $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
-      }
-    </script>
+    <script src="Local/js/index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-   
     <script>
       AOS.init();
     </script>
@@ -525,17 +447,17 @@
             <p
               class="mb-5 uppercase font-bold text-muted text-white no-underline"
             >
-              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#"
+              <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#"
                 >Beranda</a
               >
-              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="Struktur.html"
+              <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="Struktur.html"
                 >Struktur</a
               >
-              <a class="xs:mr-2 md:mr-5 transform duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
+              <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
                 >Sejarah</a
               >
               <br class="xs:flex md:hidden">
-              <a href="index.html#DaftarAnggota" class="mr-3 transform duration-200 xs:text-sm md:text-base hover:text-white">
+              <a href="index.html#DaftarAnggota" class="mr-3 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white">
                 Daftar Anggota
               </a>
             </p>
@@ -543,7 +465,7 @@
           <div class="row mt-5">
             <div class="col-md-12 text-center">
               <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
-                Powered by : <a class="hover:text-white" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
+                Powered by : <a class="hover:text-white text-muted" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
               </p>
             </div>
           </div>
@@ -569,15 +491,5 @@
     />
   </svg>
 </div>
-<script>
-  const tombol = document.querySelector("#uwow");
-  tombol.addEventListener("click", function () {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "smooth",
-    });
-  });
-</script>
-
+<script src="Local/js/javascript1.js"></script>
 </html>
