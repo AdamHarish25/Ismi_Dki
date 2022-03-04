@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+</head>
+<body>
 <?php
 include 'connection.php';
 if (isset($_POST['submit'])) {
@@ -34,17 +46,35 @@ if (isset($_POST['submit'])) {
     // eksekusi query untuk menyimpan ke database
     $saved = $stmt->execute($params);
     if($saved) {
-      $message = "Success";
-      echo "<script type='text/javascript'>alert('$message');</script>";
+        ?>
+                <script>
+                  Swal.fire({
+                    type: 'success',
+                    title: 'Success',
+                    text: 'Nama anda telah terdaftar sebagai Anggota Kami!'
+                  }).then(function() {
+                    window.location.assign('index.html');
+                  })
+                </script>
+            <?php
       } else {
-      $message = "Failed";
-      echo "<script type='text/javascript'>alert('$message');</script>";
+        ?>
+        <script>
+          Swal.fire({
+            type: 'error',
+            title: 'Gagal',
+            text: 'Nama anda gagal kami daftarkan sebagai anggota kami 😔, silahkan daftar ulang lagi.'
+          }).then(function() {
+            window.location.assign('index.html');
+          })
+        </script>
+    <?php
       }
-    print_r($saved);
-    exit();
   }catch(PDOException $e) {
     //show error
     die("Terjadi masalah: " . $e->getMessage());
   }
   
 ?>
+</body>
+</html>
