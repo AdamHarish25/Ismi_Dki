@@ -29,21 +29,41 @@
     position: absolute;
   }
 
-  @media only screen and (max-width: 550px){
+  @media only screen and (max-width:599px) and (max-height:599px){
     body {
-      height: 880vh !important;
+      height: 1000vh !important;
       position: relative;
     }
   }
-  @media only screen and (min-width: 600px) {
+
+  @media only screen and (max-width: 599px) and (min-height:600px){
     body {
-      height: 940vh !important;
+      height: 910vh !important;
       position: relative;
     }
   }
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 600px) and (max-height:599px){
     body {
-      height: 750vh !important;
+      height: 1100vh !important;
+      position: relative;
+    }
+  }
+  @media only screen and (min-width: 600px) and (min-height:600px){
+    body {
+      height: 900vh !important;
+      position: relative;
+    }
+  }
+  @media only screen and (min-width: 768px) and(max-height:599px){
+    body {
+      height: 990vh !important;
+      position: relative;
+    }
+  }
+
+  @media only screen and (min-width: 768px) and(min-height:600px){
+    body {
+      height: 800vh !important;
       position: relative;
     }
   }
