@@ -38,13 +38,13 @@
 
   @media only screen and (max-width: 599px) and (min-height:600px){
     body {
-      height: 910vh !important;
+      height: 930vh !important;
       position: relative;
     }
   }
   @media only screen and (min-width: 600px) and (max-height:599px){
     body {
-      height: 1100vh !important;
+      height: 1400vh !important;
       position: relative;
     }
   }
