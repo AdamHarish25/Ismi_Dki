@@ -1,7 +1,8 @@
 module.exports = {
   important: true,
   content: [
-    '*.html'
+    '*.html',
+    "./node_modules/flowbite/**/*.js"
   ],
   variants: {
     extend: {
@@ -44,6 +45,11 @@ module.exports = {
       'Roboto':['"Roboto"', 'sans-serif'],
       'Rubik':['"Rubik"', 'sans-serif'],
       'Poppins':['"Poppins"', 'sans-serif'],
+      'RegDisplay':['"Noto Sans Display"','sans-serif'],
     },
   },
+  plugins: [
+    // include Flowbite as a plugin in your Tailwind CSS project
+    require('flowbite/plugin')
+  ],
 }

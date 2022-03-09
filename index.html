@@ -51,7 +51,7 @@
           class="collapse navbar-collapse"
           id="navbarSupportedContent"
         >
-          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0 w-400 navbar-nav-scroll">
             <li class="nav-item ml-2">
               <a
                 class="nav-link activel border-b-2 border-transparent px-4 py-6 md:hover:border-blue-600 md:hover:text-gray-700"
@@ -78,7 +78,13 @@
                   <a
                     class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
                     href="#Sejarah"
-                    >Sejarah</a
+                    >
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                    Sejarah</a
                   >
                 </li>
                 <br />
@@ -86,7 +92,13 @@
                   <a
                     class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
                     href="#VisiMisi"
-                    >Visi dan Misi</a
+                    >
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </span>
+                    Visi dan Misi</a
                   >
                 </li>
               </ul>
@@ -110,6 +122,56 @@
                 class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                 href="Kegiatan.html"
                 >Kegiatan</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-2">
+              <button
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700 dropdown-toggle"
+                id="navbarDropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Jadi Admin
+              </button>
+              <ul
+                class="dropdown-menu shadow-md rounded-md animationGrow border-0 py-5 px-4 fade-down"
+                aria-labelledby="navbarDropdown"
+              >
+              <li><h6 class="dropdown-header">Sudah mendaftar jadi Admin?</h6></li>
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 group"
+                    href="Login.html"
+                    >
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg></span>
+                    Login</a
+                  >
+                </li>
+                <br />
+                <li><h6 class="dropdown-header">Belum mendaftar jadi Admin?</h6></li>
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="Registration.html"
+                    >
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                      </svg>
+                    </span>
+                    Daftar segera!</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item ml-2 hidden">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="DaftarListAnggota.php"
+                >List Anggota</a
               >
             </li>
           </ul>
@@ -300,7 +362,7 @@
                   <div class="form-floating mb-3">
                     <input
                       type="text"
-                      class="form-control shadow-blue-400"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="Name"
                       name="Nama"
                       placeholder="John Doe"
@@ -313,7 +375,7 @@
                   <div class="form-floating mb-3">
                     <input
                       type="email"
-                      class="form-control shadow-blue-400"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="Email"
                       name="email"
                       placeholder="Example@gmail.com"
@@ -326,7 +388,7 @@
                   <div class="form-floating">
                     <input
                       type="number"
-                      class="form-control"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="Nomor"
                       name="phone"
                       placeholder="Number"
@@ -340,7 +402,7 @@
                   <div class="form-floating date">
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="tgl-lahir"
                       name="date"
                       placeholder="date"
@@ -355,7 +417,7 @@
                 <div class="col-12 pb-10 px-14">
                   <div class="form-floating ">
                     <textarea
-                      class="form-control h-36"
+                      class="form-control h-36 shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       placeholder="Alamat"
                       id="Address"
                       name="Alamat"
@@ -367,7 +429,7 @@
                   <div class="form-floating">
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="Company"
                       name="Perusahaan"
                       placeholder="Nama Perusahaan"
@@ -379,7 +441,7 @@
                   <div class="form-floating">
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="productsName"
                       name="Nproduk"
                       placeholder="Nama Produk"
@@ -391,7 +453,7 @@
                   <div class="form-floating">
                     <input
                       type="text"
-                      class="form-control"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="products"
                       name="Jproduk"
                       placeholder="Jenis Produk"
@@ -402,11 +464,12 @@
                 <div class="col-12 pb-10 px-14">
                   <div class="form-floating">
                     <input
-                      type="text"
-                      class="form-control"
+                      type="url"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       id="Website"
                       name="Webb"
                       placeholder="Website Perusahaan"
+                      pattern="https://.*"  
                       value="https://"
                     />
                     <label for="Website">Website Perusahaan</label>
