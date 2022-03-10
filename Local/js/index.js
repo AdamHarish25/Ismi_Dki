@@ -23,20 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   // if
 
-  var prevScrollpos = window.scrollY;
-  window.onscroll = function () {
-    var currentScrollPos = window.scrollY;
-    if (prevScrollpos > currentScrollPos) {
-      $(collapsee).collapse("hide");
-    }
-    prevScrollpos = currentScrollPos;
-  };
-
-  // if ( == true) {
-  //   $("#ToggleButton").find("i").toggleClass("fa-times fa-bars");
-  // }
   
 });
+
 
 //   $(document).on("ready", function() {
 

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head contenteditable="false">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="Local/css/bootstrap.css" />
+    <link rel="stylesheet" href="Local/css/Output.css" />
+    <link rel="stylesheet" href="Local/css/style.css" />
+    <title>Struktur Ismi Dki</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon">
+    <link rel="stylesheet" href="Local/css/Struktur.css">
+    <script src="Local/js/Struktur2.js"></script>
+</head>
+<body contenteditable="false">
+    <nav
+      class="autohide navbar navbar-expand-lg navbar-light bg-white shadow-md"
+      role="navigation"
+      aria-labelledby="TopNav"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img class="w-20" src="img/LogoIsmi.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler border-none shadow-none"
+          onclick="OnOn()"
+          id="ToggleButton"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i id="targetted" class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0">
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link activel border-b-2 border-transparent px-4 py-6 md:hover:border-blue-600 md:hover:text-gray-700"
+                aria-current="page"
+                href="indexAdmin.html"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="KegiatanUadmin.html"
+                >Kegiatan</a
+              >
+            </li>
+            <!-- <li class="nav-item dropdown ml-2">
+              <button
+                class="nav-link dropdown-toggle border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Kegiatan
+              </button>
+              <ul
+                class="dropdown-menu rounded-b-xl rounded-t-none animationGrow border-0 py-3 px-4 shadow-md fade-down"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="#Artikel1"
+                    >Artikel 1</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 mt-2"
+                    href="Kegiatan2.html"
+                    >Artikel 2</a
+                  >
+                </li>
+              </ul>
+            </li> -->
+            <li class="nav-item ml-2">
+                <a
+                  class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                  href="DaftarListAnggota.php"
+                  >List Anggota</a
+                >
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container-fluid h-full pt-20 pb-40">
+        <div class="row justify-content-center">
+            <div class="col-12 h-fit mb-10">
+                <h1 class="text-center font-round font-bold text-2xl">Struktur organisasi Ismi Dki <br>Periode 2021-2026</h1>
+            </div>
+            <div class="col-12 h-fit flex justify-center mb-52 lg:px-32 xl:px-60 pb-40">
+                <div class="card">
+                    <div class="card-body">
+                       <figure class="figure">
+                                <div class="img-magnifier-container">
+                                    <img class="xs:w-full h-full d-block mx-auto" id="myimage" src="img/StrukturOriginal.svg" alt="">
+                                </div>
+                            <figcaption class="figure-caption text-center font-Poppins xs:text-xs md:text-base">
+                                Untuk melihat lebih jelas, silahkan klik bagian dari foto tersebut. <br>
+                                Dan jika kaca pembesar tidak bekerja, silahkan reload browser anda.
+                            </figcaption>
+                       </figure> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Local/js/Struktur.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     
+      <script>
+        AOS.init();
+      </script>
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"
+      ></script>
+      <footer class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0">
+        <div class="container-fluid">
+          <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+              <h2 class="font-Poppins text-3xl mb-4">
+                <a href="#" class="text-white">Ismidki.org</a>
+              </h2>
+              <p
+                class="mb-5 uppercase font-bold text-muted text-white no-underline"
+              >
+                <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="indexAdmin.html"
+                  >Beranda</a
+                >
+                <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#Struktur"
+                  >Struktur</a
+                >
+                <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="indexAdmin.html#Sejarah"
+                  >Sejarah</a
+                >
+                <br class="xs:flex md:hidden">
+                    <a
+                      class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white"
+                      href="DaftarListAnggota.php"
+                      >List Anggota</a
+                    >
+              </p>
+            </div>
+            <div class="row mt-5">
+              <div class="col-md-12 text-center">
+                <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
+                  Powered by : <a class="hover:text-white text-muted" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+</body>
+<div
+  title="Back to top"
+  id="uwow"
+  class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</div>
+<script src="Local/js/javascript1.js"></script>
+</html>

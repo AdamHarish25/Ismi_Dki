@@ -38,7 +38,7 @@
 
   @media only screen and (max-width: 599px) and (min-height:600px){
     body {
-      height: 930vh !important;
+      height: 950vh !important;
       position: relative;
     }
   }
@@ -50,20 +50,20 @@
   }
   @media only screen and (min-width: 600px) and (min-height:600px){
     body {
-      height: 900vh !important;
+      height: 850vh !important;
       position: relative;
     }
   }
-  @media only screen and (min-width: 768px) and(max-height:599px){
+  @media only screen and (min-width: 800px) and(max-height:599px){
     body {
       height: 990vh !important;
       position: relative;
     }
   }
 
-  @media only screen and (min-width: 768px) and(min-height:600px){
+  @media only screen and (min-width: 800px) and(min-height:600px){
     body {
-      height: 800vh !important;
+      height: 700vh !important;
       position: relative;
     }
   }

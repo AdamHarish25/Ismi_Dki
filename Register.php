@@ -15,8 +15,8 @@
     include 'connection.php';
     if (isset($_POST['submit'])) {
         $name = $_POST['Username'];
-        $password = $_POST['Password'];
-        $repassword = $_POST['Password2'];
+        $password = md5($_POST['Password']);
+        $repassword = md5($_POST['Password2']);
         $email = $_POST['Email'];
         $nohp = $_POST['Telp'];
 
@@ -30,7 +30,7 @@
         // bind parameter ke query
         $params = array(
             ":Nama" => $name,
-            ":Password" => $password and $repassword,
+            ":Password" => $password,
             ":Email" => $email,
             ":NoHp" => $nohp,
         );
@@ -45,7 +45,7 @@
                     title: 'Sukses',
                     text: 'Berhasil mendaftarkan anda menjadi Admin!'
                 }).then(function() {
-                    window.location.assign('index.html');
+                    window.location.assign('indexAdmin.html');
                 })
             </script>
         <?php

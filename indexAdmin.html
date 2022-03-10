@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="Local/css/bootstrap.css" />
+    <link rel="stylesheet" href="Local/css/Output.css" />
+    <link rel="stylesheet" href="Local/css/style.css" />
+    <title>Ismi Dki</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon">
+    <link rel="stylesheet" href="Local/css/Index.css">
+  </head>
+  <body>
+    <nav class="autohide navbar navbar-expand-lg navbar-light bg-white" role="navigation">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"
+          ><img class="w-20" src="img/LogoIsmi.png" alt="" />
+        </a>
+        <button
+          class="navbar-toggler border-none shadow-none"
+          type="button"
+          id="ToggleButton"
+          onclick="OnOn()"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa fa-bars"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0 w-400 navbar-nav-scroll">
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link activel border-b-2 border-transparent px-4 py-6 md:hover:border-blue-600 md:hover:text-gray-700"
+                aria-current="page"
+                href="#"
+                >Beranda</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-2">
+              <button
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700 dropdown-toggle"
+                id="navbarDropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Profile
+              </button>
+              <ul
+                class="dropdown-menu shadow-md rounded-md animationGrow border-0 py-3 px-4 fade-down"
+                aria-labelledby="navbarDropdown"
+              >
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="#Sejarah"
+                    >
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                      </svg>
+                    </span>
+                    Sejarah</a
+                  >
+                </li>
+                <br />
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="#VisiMisi"
+                    >
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      </svg>
+                    </span>
+                    Visi dan Misi</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="StrukturAdmin.html"
+                >Struktur</a
+              >
+            </li>
+            <li class="nav-item ml-2 hidden">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="#DaftarAnggota"
+                >Daftar Anggota</a
+              >
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="KegiatanUadmin.html"
+                >Kegiatan</a
+              >
+            </li>
+            <li class="nav-item dropdown ml-2 hidden">
+              <button
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700 dropdown-toggle"
+                id="navbarDropdown"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Jadi Admin
+              </button>
+              <ul
+                class="dropdown-menu shadow-md rounded-md animationGrow border-0 py-5 px-4 fade-down"
+                aria-labelledby="navbarDropdown"
+              >
+              <li><h6 class="dropdown-header">Sudah mendaftar jadi Admin?</h6></li>
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 group"
+                    href="Login.html"
+                    >
+                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+                    </svg></span>
+                    Login</a
+                  >
+                </li>
+                <br />
+                <li><h6 class="dropdown-header">Belum mendaftar jadi Admin?</h6></li>
+                <li>
+                  <a
+                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
+                    href="Registration.html"
+                    >
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                      </svg>
+                    </span>
+                    Daftar segera!</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item ml-2">
+              <a
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                href="DaftarListAnggota.php"
+                >List Anggota</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid bg-gray-300">
+      <div class="row">
+        <div
+          class="bg-gray-500 relative bg-gradient-to-b from-green-200 to-red-300 h-screen flex justify-center col-12"
+        >
+          <img class="object-contain opacity-20" src="img/indonesia.svg" alt="" />
+          <section class="z-20">
+            <img
+              class="absolute xs:w-28 md:w-36 left-2/4 2xl:mt-32 top-1/4 transform -translate-x-2/4 -translate-y-2/4"
+              src="img/LogoIsmi.png"
+              alt=""
+            />
+            <h1
+              class="absolute font-bold text-center font-Poppins xs:text-xl xs:my-10 md:mt-0 md:text-3xl lg:text-4xl left-2/4 top-2/4 transform -translate-x-2/4 -translate-y-2/4"
+            >
+              Selamat Datang Di Website Resmi <strong>Ismi Dki</strong>
+            </h1>
+            <h2
+              class="absolute font-Roboto text-center text-sm md:text-xl left-2/4 top-2/4 xs:mt-32 md:mt-16 transform -translate-x-2/4 -translate-y-2/4"
+            >
+              Silahkan Explorasi website resmi Kami
+            </h2>
+            <div
+              class="absolute left-2/4 top-2/4 xs:mt-52 md:mt-36 transform -translate-x-2/4 -translate-y-2/4 flex justify-center w-full h-10"
+            >
+              <a
+                class="animate-bounce no-underline duration-300"
+                href="#Sejarah"
+              >
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <div
+      id="Sejarah"
+      class="container-fluid h-full 2xl:h-screen sm:mt-10 lg:mt-0 bg-gray-50"
+    >
+      <div class="row">
+        <div class="col-lg-5 col-sm-12 col-md-12 relative lg:h-screen">
+         <a class="z-50 lg:absolute lg:top-52 lg:left-1/3 xl:top-40 xs:w-screen lg:w-10/12 2xl:max-w-3xl" href="img/IsmiDkiBanner2.png">
+          <img
+          data-aos="fade-up"
+          draggable="false"
+          class="object-cover z-50 xs:w-screen lg:w-10/12 2xl:max-w-3xl xs:rounded-none md:rounded-lg"
+          src="img/IsmiDkiBanner2.png"
+          alt=""
+        />
+         </a>
+        </div>
+        <div
+          class="col-lg-7 col-sm-12 col-md-12 relative pt-20 px-10 bg-green-800 h-full 2xl:h-screen overflow-hidden"
+        >
+          <h1
+            class="text-center text-gray-50 relative md:containts text-3xl font-round font-semibold mb-10"
+            data-aos="fade-up"
+            data-aos-delay="600"
+            
+          >
+            Sejarah Organisasi Ismi
+          </h1>
+          <hr class="mb-14 -mt-4 bg-gray-50" />
+
+          <p
+            class="text-left text-gray-50 xs:mb-16 xs:mt-0 2xl:mt-40 lg:text-base 2xl:text-xl font-normal 2xl:ml-52 lg:ml-28 xl:ml-40 font-Rubik"
+            data-aos="fade-up"
+            data-aos-delay="1200"
+            
+          >
+            <strong>ISMI</strong> (Ikatan Saudagar Muslim se-Indonesia)
+            didirikan oleh 4 ormas besar, <br> yaitu : NU, MUHAMMADIYAH, ICMI dan MUI
+            di Jakarta pada tanggal 18 Desember 2012 sebagai institusi
+            per-kumpulan Saudagar Muslim Seluruh Indonesia, merupakan kebutuhan
+            dalam kancah da'wah bil hal membangun perekonomian dan kesejahteraan
+            umat, bangsa dan negara. <br /><br />
+            <strong>ISMI</strong> sebagai wadah Saudagar / Pengusaha Muslim yang
+            merupakan mayoritas pengusaha di negara Indonesia sudah sepatutnya
+            menjadi penopang perekonomian nasional di tengah perubahan yang
+            terjadi di dunia. <br /><br />
+            <strong>ISMI</strong> perlu mendorong ekonomi Islam sebagai konsep
+            yang rahmatan lil 'alamin untuk dimanifestasikan dalam suatu
+            tindakan yang melingkupi peningkatan kesejahteraan, pemerataan
+            kesempatan, penegakan kebenaran dan keadilan serta turut memperkokoh
+            persatuan dan kesatuan bangsa dan negara dalam bingkai : Pancasila,
+            UUD 1945, Bhinneka Tunggal Ika, dan NKRI. Problematika dan tantangan
+            perekonomian dalam lingkup regional, nasional maupun internasional
+            saat ini dalam kondisi kritis dan sangat kompleks, sehingga perlu
+            dijadikan perhatian khusus. <br /><br />
+            <strong>ISMI</strong> perlu menganalisis secara mendalam dan
+            mengajukan solusi yang terbaik guna penyelamatan ekonomi yang
+            membawa pada kesejahteraan masyarakat di Indonesia pada khususnya
+            dan umat manusia di dunia pada umumnya. <br />Saudagar / Pengusaha
+            Muslim di Indonesia harus mengambil peran dan langkah nyata dalam
+            pemecahan sistem ekonomi yang ada saat ini. Oleh Karenanya, sudah
+            sepatutnya pengusaha muslim menjadi pelaku utama yang memberi
+            manfaat, kontribusi besar dan menjadi tiang / soko guru perekonomian
+            UKM (Usaha Kecil dan Menengah) nasional di tengah perubahan yang
+            terjadi di dunia global dan di era digital.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid h-full mt-0">
+      <div id="VisiMisi" class="row">
+        <div class="col-12 h-full relative bg-orange-400 flex justify-center">
+          <div
+            class="bg-white xs:w-full sm:w-5/6 lg:w-2/3 h-full flex justify-center border-y-2 border-gray-300 overflow-x-hidden overflow-y-hidden"
+          >
+            <div class="row flex justify-start">
+              <div class="col-12">
+                <h1 class="text-center font-Rubik text-3xl mt-12" 
+                data-aos="fade-left"
+                >
+                  Visi dan Misi<strong class="font-extrabold font-round">
+                    Ismi Dki</strong
+                  >
+                </h1>
+                <hr class="mb-10 mx-36 mt-2 h-0.5 opacity-20 bg-black" />
+                <div class="col-12 flex justify-center mt-9">
+                  <img
+                    data-aos="fade-right"
+                    data-aos-delay="200"
+                    draggable="false"
+                    class="xs:w-4/6 md:w-2/4 z-30"
+                    src="img/Project_44-01.jpg"
+                    alt=""
+                    title="Created by naki-sama from Vecteezy.com"
+                  />
+                </div>
+              </div>
+              <div class="col-12 xs:p-14 lg:p-28"
+              data-aos="fade-down"
+              data-aos-delay="400"
+              >
+                <h1 class="text-center font-round font-bold text-2xl">Visi</h1>
+                <p class="text-center font-Rubik xs:text-base md:text-lg mt-6 text-muted">
+                  Visi Kami menjadi wadah persatuan Saudagar Muslim menuju
+                  kesuksesan dalam berbisnis dan mencapai kesejahteraan bersama.
+                </p>
+              </div>
+              <div class="col-12 xs:p-16 lg:p-36 -mt-20"
+              data-aos="fade-up"
+              data-aos-delay="600"
+              >
+                <h1 class="text-center font-round font-bold text-2xl">Misi</h1>
+                <p class="text-center fXont-Rubik xs:text-base md:text-lg mt-6 text-muted">
+                  Misi Kami adalah mendorong penumbuhan, pengembangan dan
+                  kemandirian Saudagar Muslim. Meningkatkan sumber daya manusia, 
+                  daya saing dan peran aktif dalam ekonomi skala nasional,
+                  regional dan internasional. Meningkatkan kerjasama dan
+                  jaringan usaha Saudagar Muslim se-Indonesia Tagline
+                  <strong>ISMI</strong> Merangkai Persatuan, Kesuksesan dan
+                  Kesejahteraan. Dengan modal sosial yang sangat potensial
+                  karena didirikan oleh NU, Muhammadiyah, ICMI dan MUI,
+                  seharusnya <strong>ISMI</strong> mampu merangkai persatuan
+                  saudagar muslim se-Indonesia.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="DaftarAnggota" class="container-fluid h-full pb-96">
+      <div class="row">
+        <div class="col-12 flex justify-center h-full bg-white">
+          <div
+            class="xs:w-full md:w-9/12 h-full shadow-md shadow-gray-400 my-40 rounded-xl bg-green-300 flex justify-center overflow-x-hidden"
+          >
+            <div class="row py-6">
+              <div class="col-12 mt-5">
+                <h1 class="text-center text-2xl font-bold font-round">
+                  Jadi bagian dari Kami
+                </h1>
+              </div>
+              <form action="Submit.php" method="POST" class="row g-3">
+                <div class="col-lg-6 col-xs-12 pt-10 px-14">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="text"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="Name"
+                      name="Nama"
+                      placeholder="John Doe"
+                      required
+                    />
+                    <label for="Name">Nama</label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xs-12 pt-10 px-14">
+                  <div class="form-floating mb-3">
+                    <input
+                      type="email"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="Email"
+                      name="email"
+                      placeholder="Example@gmail.com"
+                      required
+                    />
+                    <label for="Email">E-mail</label>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-xs-12 py-4 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="number"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="Nomor"
+                      name="phone"
+                      placeholder="Number"
+                      pattern="ex:0811222333444"
+                      required
+                    />
+                    <label for="Nomor">Nomor Hp</label>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-xs-12 py-4 px-14">
+                  <div class="form-floating date">
+                    <input
+                      type="text"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="tgl-lahir"
+                      name="date"
+                      placeholder="date"
+                      autocomplete="off"
+                      spellcheck="false"
+                      autocorrect="off"
+                      required
+                    />
+                    <label for="tgl-lahir">Tanggal Lahir</label>
+                  </div>
+                </div>
+                <div class="col-12 pb-10 px-14">
+                  <div class="form-floating ">
+                    <textarea
+                      class="form-control h-36 shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      placeholder="Alamat"
+                      id="Address"
+                      name="Alamat"
+                    ></textarea>
+                    <label for="Address">Alamat</label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-xs-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="Company"
+                      name="Perusahaan"
+                      placeholder="Nama Perusahaan"
+                    />
+                    <label for="Company">Nama Perusahaan</label>
+                  </div>
+                </div>
+                <div class="col-lg-7 col-xs-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="productsName"
+                      name="Nproduk"
+                      placeholder="Nama Produk"
+                    />
+                    <label for="productsName">Nama Produk</label>
+                  </div>
+                </div>
+                <div class="col-lg-5 col-xs-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="products"
+                      name="Jproduk"
+                      placeholder="Jenis Produk"
+                    />
+                    <label for="products">Jenis Produk</label>
+                  </div>
+                </div>
+                <div class="col-12 pb-10 px-14">
+                  <div class="form-floating">
+                    <input
+                      type="url"
+                      class="form-control shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
+                      id="Website"
+                      name="Webb"
+                      placeholder="Website Perusahaan"
+                      pattern="https://.*"  
+                      value="https://"
+                    />
+                    <label for="Website">Website Perusahaan</label>
+                  </div>
+                </div>
+                <div class="col-12 pb-10 px-14 flex justify-center">
+                  <button
+                    class="xs:px-20 md:px-40 py-3 rounded-lg bg-gray-100 text-black font-bold hover:ring-2 hover:ring-blue-300 transform duration-200 hover:text-lg focus:ring-4 focus:ring-blue-300 focus:text-lg"
+                    type="submit"
+                    name="submit"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> 
+    <script src="Local/js/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <footer class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0">
+      <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-md-12 text-center">
+            <h2 class="font-Poppins text-3xl mb-4">
+              <a href="#" class="text-white">Ismidki.org</a>
+            </h2>
+            <p
+              class="mb-5 uppercase font-bold text-muted text-white no-underline"
+            >
+            <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#"
+            >Beranda</a
+          >
+          <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="StrukturAdmin.html"
+            >Struktur</a
+          >
+          <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
+            >Sejarah</a
+          >
+          <br class="xs:flex md:hidden">
+              <a
+                class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white"
+                href="DaftarListAnggota.php"
+                >List Anggota</a
+              >
+            </p>
+          </div>
+          <div class="row mt-5">
+            <div class="col-md-12 text-center">
+              <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
+                Powered by : <a class="hover:text-white text-muted" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <div
+  title="Back to top"
+  id="uwow"
+  class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+    viewBox="0 0 20 20"
+    fill="currentColor"
+  >
+    <path
+      fill-rule="evenodd"
+      d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+      clip-rule="evenodd"
+    />
+  </svg>
+</div>
+<script src="Local/js/javascript1.js"></script>
+</html>
