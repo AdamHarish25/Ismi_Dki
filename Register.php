@@ -31,7 +31,6 @@
         $params = array(
             ":Nama" => $name,
             ":Password" => $password,
-            ":Password" => $repassword,
             ":Email" => $email,
             ":NoHp" => $nohp,
         );
