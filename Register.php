@@ -30,28 +30,16 @@
         // bind parameter ke query
         $params = array(
             ":Nama" => $name,
-            ":Password" => $password,
+            ":Password" => $password and $repassword,
             ":Email" => $email,
             ":NoHp" => $nohp,
         );
 
         // eksekusi query untuk menyimpan ke database
         $saved = $stmt->execute($params);
-        if (!$saved AND $password !== $repassword) {
+        if ($saved AND $password == $repassword) {
     ?>
-            <script>
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Gagal',
-                    text: 'Gagal mendaftarkan anda menjadi Admin, cek kembali Password anda.'
-                }).then(function() {
-                    window.location.assign('Registration.html');
-                })
-            </script>
-        <?php
-        } else {
-        ?>
-            <script>
+           <script>
                 Swal.fire({
                     icon: 'success',
                     title: 'Sukses',
@@ -60,6 +48,19 @@
                     window.location.assign('index.html');
                 })
             </script>
+        <?php
+        } else {
+        ?>
+         <script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Gagal',
+                    text: 'Gagal mendaftarkan anda menjadi Admin, cek kembali Password anda.'
+                }).then(function() {
+                    window.location.assign('Registration.html');
+                })
+            </script>
+            
     <?php
         }
     } catch (PDOException $e) {
