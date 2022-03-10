@@ -34,14 +34,14 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0 w-full">
           <li class="nav-item ml-2">
-            <a class="nav-link activel border-b-2 border-transparent px-4 py-6 lg:hover:border-blue-600 md:hover:text-gray-700" aria-current="page" href="index.html">Beranda</a>
+            <a class="nav-link activel border-b-2 border-transparent px-4 py-6 lg:hover:border-blue-600 md:hover:text-gray-700" aria-current="page" href="indexAdmin.html">Beranda</a>
           </li>
           <li class="nav-item ml-2">
-            <a class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 lg:hover:border-blue-600 md:hover:text-gray-700" href="Struktur.html">Struktur</a>
+            <a class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 lg:hover:border-blue-600 md:hover:text-gray-700" href="StrukturAdmin.html">Struktur</a>
           </li>
          
           <li class="nav-item ml-2">
-            <a class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 lg:hover:border-blue-600 md:hover:text-gray-700" href="Kegiatan.html">Kegiatan</a>
+            <a class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 lg:hover:border-blue-600 md:hover:text-gray-700" href="KegiatanUadmin.html">Kegiatan</a>
           </li>
         </ul>
       </div>
