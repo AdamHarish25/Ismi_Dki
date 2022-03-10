@@ -58,7 +58,7 @@
                     title: 'Sukses',
                     text: 'Berhasil mendaftarkan anda menjadi Admin!'
                 }).then(function() {
-                    window.location.assign('Index.html');
+                    window.location.assign('index.html');
                 })
             </script>
     <?php
