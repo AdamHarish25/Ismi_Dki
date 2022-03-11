@@ -1,6 +1,7 @@
 function magnify(imgID, zoom) {
   var img, glass, w, h, bw;
   img = document.getElementById(imgID);
+  var lastPt = null;
   /*create magnifier glass:*/
   glass = document.createElement("DIV");
   glass.setAttribute("class", "img-magnifier-glass");
@@ -19,6 +20,7 @@ function magnify(imgID, zoom) {
   /*and also for touch screens:*/
   glass.addEventListener("touchmove", moveMagnifier);
   img.addEventListener("touchmove", moveMagnifier);
+
   function moveMagnifier(e) {
     var pos, x, y;
     /*prevent any other actions that may occur when moving over the image*/
