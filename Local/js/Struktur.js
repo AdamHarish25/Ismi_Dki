@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     // if
   });
-  $(".navbar-collapse a").click(function () {
+  $(".navbar-collapse a").on("click", function () {
     $(".navbar-collapse").collapse("hide");
     $('#ToggleButton').find("i").toggleClass("fa-times fa-bars");
   });
@@ -36,4 +36,4 @@ document.addEventListener("DOMContentLoaded", function () {
   function OnOn() {
    $('#ToggleButton').find("i").toggleClass("fa-bars fa-times");
   }
-  magnify("myimage", 4);
+  magnify("myimage", 3);

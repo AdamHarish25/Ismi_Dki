@@ -1,6 +1,6 @@
 const collapsee = document.querySelector(".navbar-collapse");
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {       
   el_autohide = document.querySelector(".autohide");
 
   // add padding-top to body (if necessary)
