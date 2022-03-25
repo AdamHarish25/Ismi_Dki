@@ -25,11 +25,26 @@
     <link rel="stylesheet" href="Local/css/Output.css" />
     <link rel="stylesheet" href="Local/css/style.css" />
     <title>Ismi Dki</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon">
-    <link rel="stylesheet" href="Local/css/Index.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon" />
+    <link rel="stylesheet" href="Local/css/Index.css" />
+    <style>
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type="number"] {
+        -moz-appearance: textfield;
+      }
+    </style>
   </head>
   <body>
-    <nav class="autohide navbar navbar-expand-lg navbar-light bg-white" role="navigation">
+    <nav
+      class="autohide navbar navbar-expand-lg navbar-light bg-white"
+      role="navigation"
+    >
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
           ><img class="w-20" src="img/LogoIsmi.png" alt="" />
@@ -47,11 +62,10 @@
         >
           <i class="fa fa-bars"></i>
         </button>
-        <div
-          class="collapse navbar-collapse"
-          id="navbarSupportedContent"
-        >
-          <ul class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0 w-400 navbar-nav-scroll">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul
+            class="navbar-nav sm:mt-4 md:mt-0 me-auto mb-2 mb-lg-0 w-400 navbar-nav-scroll"
+          >
             <li class="nav-item ml-2">
               <a
                 class="nav-link activel border-b-2 border-transparent px-4 py-6 md:hover:border-blue-600 md:hover:text-gray-700"
@@ -78,10 +92,19 @@
                   <a
                     class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
                     href="#Sejarah"
-                    >
+                  >
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-5 w-5"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"
+                          clip-rule="evenodd"
+                        />
                       </svg>
                     </span>
                     Sejarah</a
@@ -92,10 +115,21 @@
                   <a
                     class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
                     href="#VisiMisi"
-                    >
+                  >
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                        />
                       </svg>
                     </span>
                     Visi dan Misi</a
@@ -138,28 +172,55 @@
                 class="dropdown-menu shadow-md rounded-md animationGrow border-0 py-5 px-4 fade-down"
                 aria-labelledby="navbarDropdown"
               >
-              <li><h6 class="dropdown-header">Sudah mendaftar jadi Admin?</h6></li>
+                <li>
+                  <h6 class="dropdown-header">Sudah mendaftar jadi Admin?</h6>
+                </li>
                 <li>
                   <a
                     class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 group"
                     href="Login.html"
-                    >
-                    <span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                    </svg></span>
+                  >
+                    <span
+                      ><svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
+                        /></svg
+                    ></span>
                     Login</a
                   >
                 </li>
                 <br />
-                <li><h6 class="dropdown-header">Belum mendaftar jadi Admin?</h6></li>
+                <li>
+                  <h6 class="dropdown-header">Belum mendaftar jadi Admin?</h6>
+                </li>
                 <li>
                   <a
                     class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
                     href="Registration.html"
-                    >
+                  >
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="h-6 w-6"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M12 4v16m8-8H4"
+                        />
                       </svg>
                     </span>
                     Daftar segera!</a
@@ -183,7 +244,11 @@
         <div
           class="bg-gray-500 relative bg-gradient-to-b from-green-200 to-red-300 h-screen flex justify-center col-12"
         >
-          <img class="object-contain opacity-20" src="img/indonesia.svg" alt="" />
+          <img
+            class="object-contain opacity-20"
+            src="img/indonesia.svg"
+            alt=""
+          />
           <section class="z-20">
             <img
               class="absolute xs:w-28 md:w-36 left-2/4 2xl:mt-32 top-1/4 transform -translate-x-2/4 -translate-y-2/4"
@@ -207,9 +272,18 @@
                 class="animate-bounce no-underline duration-300"
                 href="#Sejarah"
               >
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-black" viewBox="0 0 20 20" fill="currentColor">
-                <path fill-rule="evenodd" d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z" clip-rule="evenodd" />
-              </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 text-black"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M15.707 4.293a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 011.414-1.414L10 8.586l4.293-4.293a1 1 0 011.414 0zm0 6a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-5-5a1 1 0 111.414-1.414L10 14.586l4.293-4.293a1 1 0 011.414 0z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
               </a>
             </div>
           </section>
@@ -222,15 +296,18 @@
     >
       <div class="row">
         <div class="col-lg-5 col-sm-12 col-md-12 relative lg:h-screen">
-         <a class="z-50 lg:absolute lg:top-52 lg:left-1/3 xl:top-40 xs:w-screen lg:w-10/12 2xl:max-w-3xl" href="img/IsmiDkiBanner2.png">
-          <img
-          data-aos="fade-up"
-          draggable="false"
-          class="object-cover z-50 xs:w-screen lg:w-10/12 2xl:max-w-3xl xs:rounded-none md:rounded-lg"
-          src="img/IsmiDkiBanner2.png"
-          alt=""
-        />
-         </a>
+          <a
+            class="z-50 lg:absolute lg:top-52 lg:left-1/3 xl:top-40 xs:w-screen lg:w-10/12 2xl:max-w-3xl"
+            href="img/IsmiDkiBanner2.png"
+          >
+            <img
+              data-aos="fade-up"
+              draggable="false"
+              class="object-cover z-50 xs:w-screen lg:w-10/12 2xl:max-w-3xl xs:rounded-none md:rounded-lg"
+              src="img/IsmiDkiBanner2.png"
+              alt=""
+            />
+          </a>
         </div>
         <div
           class="col-lg-7 col-sm-12 col-md-12 relative pt-20 px-10 bg-green-800 h-full 2xl:h-screen overflow-hidden"
@@ -239,7 +316,6 @@
             class="text-center text-gray-50 relative md:containts text-3xl font-round font-semibold mb-10"
             data-aos="fade-up"
             data-aos-delay="600"
-            
           >
             Sejarah Organisasi Ismi
           </h1>
@@ -249,14 +325,13 @@
             class="text-left text-gray-50 xs:mb-16 xs:mt-0 2xl:mt-40 lg:text-base 2xl:text-xl font-normal 2xl:ml-52 lg:ml-28 xl:ml-40 font-Rubik"
             data-aos="fade-up"
             data-aos-delay="1200"
-            
           >
             <strong>ISMI</strong> (Ikatan Saudagar Muslim se-Indonesia)
-            didirikan oleh 4 ormas besar, <br> yaitu : NU, MUHAMMADIYAH, ICMI dan MUI
-            di Jakarta pada tanggal 18 Desember 2012 sebagai institusi
-            per-kumpulan Saudagar Muslim Seluruh Indonesia, merupakan kebutuhan
-            dalam kancah da'wah bil hal membangun perekonomian dan kesejahteraan
-            umat, bangsa dan negara. <br /><br />
+            didirikan oleh 4 ormas besar, <br />
+            yaitu : NU, MUHAMMADIYAH, ICMI dan MUI di Jakarta pada tanggal 18
+            Desember 2012 sebagai institusi per-kumpulan Saudagar Muslim Seluruh
+            Indonesia, merupakan kebutuhan dalam kancah da'wah bil hal membangun
+            perekonomian dan kesejahteraan umat, bangsa dan negara. <br /><br />
             <strong>ISMI</strong> sebagai wadah Saudagar / Pengusaha Muslim yang
             merupakan mayoritas pengusaha di negara Indonesia sudah sepatutnya
             menjadi penopang perekonomian nasional di tengah perubahan yang
@@ -292,8 +367,9 @@
           >
             <div class="row flex justify-start">
               <div class="col-12">
-                <h1 class="text-center font-Rubik text-3xl mt-12" 
-                data-aos="fade-left"
+                <h1
+                  class="text-center font-Rubik text-3xl mt-12"
+                  data-aos="fade-left"
                 >
                   Visi dan Misi<strong class="font-extrabold font-round">
                     Ismi Dki</strong
@@ -312,24 +388,30 @@
                   />
                 </div>
               </div>
-              <div class="col-12 xs:p-14 lg:p-28"
-              data-aos="fade-down"
-              data-aos-delay="400"
+              <div
+                class="col-12 xs:p-14 lg:p-28"
+                data-aos="fade-down"
+                data-aos-delay="400"
               >
                 <h1 class="text-center font-round font-bold text-2xl">Visi</h1>
-                <p class="text-center font-Rubik xs:text-base md:text-lg mt-6 text-muted">
+                <p
+                  class="text-center font-Rubik xs:text-base md:text-lg mt-6 text-muted"
+                >
                   Visi Kami menjadi wadah persatuan Saudagar Muslim menuju
                   kesuksesan dalam berbisnis dan mencapai kesejahteraan bersama.
                 </p>
               </div>
-              <div class="col-12 xs:p-16 lg:p-36 -mt-20"
-              data-aos="fade-up"
-              data-aos-delay="600"
+              <div
+                class="col-12 xs:p-16 lg:p-36 -mt-20"
+                data-aos="fade-up"
+                data-aos-delay="600"
               >
                 <h1 class="text-center font-round font-bold text-2xl">Misi</h1>
-                <p class="text-center fXont-Rubik xs:text-base md:text-lg mt-6 text-muted">
+                <p
+                  class="text-center fXont-Rubik xs:text-base md:text-lg mt-6 text-muted"
+                >
                   Misi Kami adalah mendorong penumbuhan, pengembangan dan
-                  kemandirian Saudagar Muslim. Meningkatkan sumber daya manusia, 
+                  kemandirian Saudagar Muslim. Meningkatkan sumber daya manusia,
                   daya saing dan peran aktif dalam ekonomi skala nasional,
                   regional dan internasional. Meningkatkan kerjasama dan
                   jaringan usaha Saudagar Muslim se-Indonesia Tagline
@@ -357,7 +439,7 @@
                   Jadi bagian dari Kami
                 </h1>
               </div>
-              <form action="Submit.php" method="POST" class="row g-3">
+              <form action="SubmitAdmin.php" method="POST" class="row g-3">
                 <div class="col-lg-6 col-xs-12 pt-10 px-14">
                   <div class="form-floating mb-3">
                     <input
@@ -415,7 +497,7 @@
                   </div>
                 </div>
                 <div class="col-12 pb-10 px-14">
-                  <div class="form-floating ">
+                  <div class="form-floating">
                     <textarea
                       class="form-control h-36 shadow-none focus:ring-2 ring-blue-400 rounded-md border-none"
                       placeholder="Alamat"
@@ -469,7 +551,7 @@
                       id="Website"
                       name="Webb"
                       placeholder="Website Perusahaan"
-                      pattern="https://.*"  
+                      pattern="https://.*"
                       value="https://"
                     />
                     <label for="Website">Website Perusahaan</label>
@@ -489,7 +571,7 @@
           </div>
         </div>
       </div>
-    </div> 
+    </div>
     <script src="Local/js/index.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -500,7 +582,9 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
-    <footer class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0">
+    <footer
+      class="bg-black p-20 rounded-t-3xl absolute bottom-0 right-0 left-0"
+    >
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-md-12 text-center">
@@ -510,16 +594,22 @@
             <p
               class="mb-5 uppercase font-bold text-muted text-white no-underline"
             >
-            <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#"
-            >Beranda</a
-          >
-          <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="StrukturAdmin.html"
-            >Struktur</a
-          >
-          <a class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white" href="#Sejarah"
-            >Sejarah</a
-          >
-          <br class="xs:flex md:hidden">
+              <a
+                class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white"
+                href="#"
+                >Beranda</a
+              >
+              <a
+                class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white"
+                href="StrukturAdmin.html"
+                >Struktur</a
+              >
+              <a
+                class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white"
+                href="#Sejarah"
+                >Sejarah</a
+              >
+              <br class="xs:flex md:hidden" />
               <a
                 class="xs:mr-2 md:mr-5 transform text-muted duration-200 xs:text-sm md:text-base hover:text-white"
                 href="DaftarListAnggota.php"
@@ -530,7 +620,14 @@
           <div class="row mt-5">
             <div class="col-md-12 text-center">
               <p class="mb-8 text-muted text-white xs:text-xs md:text-base">
-                Powered by : <a class="hover:text-white text-muted" href="https://pengurusanijin.net"><Strong class="font-bold font-Poppins">www.pengurusanijin.net</Strong></a>
+                Powered by :
+                <a
+                  class="hover:text-white text-muted"
+                  href="https://pengurusanijin.net"
+                  ><strong class="font-bold font-Poppins"
+                    >www.pengurusanijin.net</strong
+                  ></a
+                >
               </p>
             </div>
           </div>
@@ -539,22 +636,22 @@
     </footer>
   </body>
   <div
-  title="Back to top"
-  id="uwow"
-  class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
-    viewBox="0 0 20 20"
-    fill="currentColor"
+    title="Back to top"
+    id="uwow"
+    class="fixed right-5 bottom-5 p-3 rounded-full transform duration-200 bg-black hover:ring-2 hover:ring-white xs:active:ring-2 xs:active:ring-white group"
   >
-    <path
-      fill-rule="evenodd"
-      d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
-      clip-rule="evenodd"
-    />
-  </svg>
-</div>
-<script src="Local/js/javascript1.js"></script>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="h-5 w-5 text-white group-hover:h-6 group-hover:w-6 transform duration-200"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M4.293 15.707a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414 0zm0-6a1 1 0 010-1.414l5-5a1 1 0 011.414 0l5 5a1 1 0 01-1.414 1.414L10 5.414 5.707 9.707a1 1 0 01-1.414 0z"
+        clip-rule="evenodd"
+      />
+    </svg>
+  </div>
+  <script src="Local/js/javascript1.js"></script>
 </html>

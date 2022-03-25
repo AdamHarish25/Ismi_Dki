@@ -1,17 +1,12 @@
 module.exports = {
-  important: true,
+  darkMode: 'class',
   content: [
     '*.html',
-    "./node_modules/flowbite/**/*.js"
+    '*.php',
+    "./node_modules/flowbite/**/*.js",
+    './Local/js/*.js',
+    '*.js',
   ],
-  variants: {
-    extend: {
-      visibility: ["group-hover"],
-      visibility: ["group-active"],
-      width: ['hover'],
-      animation: ['group-hover'],
-    },
-   },
   theme: {
     screens:{
       'xs': '0px',
@@ -22,15 +17,14 @@ module.exports = {
       '2xl': '2036px',
     },
     extend: {
-      keyframes: {
-        visibleDelay: {
-          '0%' : { visibility: 'hidden', opacity: '0'},
-          '25%' : { visibility: 'hidden', opacity: '0'},
-          '100%' : { visibility: 'visible', opacity: '100%'},
+      keyframes:{
+        bounceX : {
+          "0%, 100%" : {transform : 'translateX(-25%)'},
+          "50%" : {transform : "none"},
         }
       },
       animation: {
-        visibleDelay: 'visibleDelay 1s ease forwards',
+        bounceX: 'bounceX 1s ease-in-out infinite',
       },
       spacing:{
         '700':'1400px',
@@ -49,7 +43,6 @@ module.exports = {
     },
   },
   plugins: [
-    // include Flowbite as a plugin in your Tailwind CSS project
     require('flowbite/plugin')
-  ],
+  ]
 }
