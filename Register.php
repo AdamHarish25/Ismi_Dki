@@ -36,33 +36,50 @@
         );
 
         // eksekusi query untuk menyimpan ke database
-        $saved = $stmt->execute($params);
-        if ($saved AND $password == $repassword) {
-    ?>
-           <script>
-                Swal.fire({
-                    icon: 'success',
-                    title: 'Sukses',
-                    text: 'Berhasil mendaftarkan anda menjadi Admin!'
-                }).then(function() {
-                    window.location.assign('indexAdmin.html');
-                })
-            </script>
-        <?php
-        } else {
-        ?>
-         <script>
-                Swal.fire({
-                    icon: 'error',
-                    title: 'Gagal',
-                    text: 'Gagal mendaftarkan anda menjadi Admin, cek kembali Password anda.'
-                }).then(function() {
-                    window.location.assign('Registration.html');
-                })
-            </script>
-            
-    <?php
+        $sel = mysqli_query($con, "SELECT * FROM `AdminIsmiDkiLogin` WHERE email = '$email'");
+		if (mysqli_num_rows($sel) > 0) {
+            ?>
+            <script>
+                   Swal.fire({
+                       icon: 'error',
+                       title: 'Gagal',
+                       text: 'Alamat email sudah digunakan.'
+                   }).then(function() {
+                       window.location.assign('Registration.html');
+                   })
+               </script>
+               
+       <?php
+        }else{
+            $saved = $stmt->execute($params);
+            if ($saved AND $password == $repassword) {
+                ?>
+                   <script>
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Sukses',
+                            text: 'Berhasil mendaftarkan anda menjadi Admin!'
+                        }).then(function() {
+                            window.location.assign('indexAdmin.html');
+                        })
+                    </script>
+                <?php
+                }else{
+                    ?>
+                    <script>
+                           Swal.fire({
+                               icon: 'error',
+                               title: 'Gagal',
+                               text: 'Mohon cek kembali password anda...'
+                           }).then(function() {
+                               window.location.assign('Registration.html');
+                           })
+                       </script>
+                       
+               <?php
+                }
         }
+
     } catch (PDOException $e) {
         //show error
         die("Terjadi masalah: " . $e->getMessage());

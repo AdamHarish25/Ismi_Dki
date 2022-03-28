@@ -9,3 +9,14 @@ try {
     die("Terjadi masalah: " . $e->getMessage());
 }
 ?>
+
+<?php 
+
+    $con = mysqli_connect('217.21.74.189','u770127161_AdminIDki', 'Adminismidki54321', 'u770127161_AdminIsmiDki');
+
+    if (!$con) {
+        die("Connection failed: " . mysqli_connect_error());
+       }
+    // print_r($con);
+    // exit();
+?>

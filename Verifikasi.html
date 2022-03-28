@@ -48,7 +48,7 @@
       <a
         title="Go back"
         class="navbar-brand ml-10 hover:text-2xl transition duration-300"
-        href="index.html"
+        href="Login.html"
       >
         <i class="fa fa-chevron-left"></i>
       </a>
@@ -59,27 +59,11 @@
           <div
             class="p-4 max-w-4xl bg-white rounded-lg border border-gray-200 shadow-inner sm:p-6 lg:p-8"
           >
-            <div class="grid grid-cols-2 gap-3 w-full mb-4 pb-2">
-              <a href="#">
-                <div
-                  class="px-10 py-2 bg-blue-600 text-white font-Poppins text-center rounded-lg hover:bg-blue-800 hover:cursor-pointer transition duration-200"
-                >
-                  Log in
-                </div>
-              </a>
-              <a href="Registration.html">
-                <div
-                  class="px-10 py-2 bg-gray-300 text-black font-Poppins text-center rounded-lg hover:bg-gray-400 hover:cursor-pointer transition duration-200"
-                >
-                  Register
-                </div>
-              </a>
-            </div>
-            <form class="space-y-6" action="Login.php" method="post">
+            <form class="space-y-20" action="VerifikasiEmail.php" method="post">
               <h5
                 class="text-xl font-semibold text-gray-900 text-center font-RegDisplay leading-snug"
               >
-                Log in
+                Verifikasi email
               </h5>
               <div>
                 <label
@@ -96,62 +80,14 @@
                   required=""
                 />
               </div>
-              <div class="flex items-center">
-                <div
-                  class="flex flex-wrap items-stretch w-full relative h-15 bg-white rounded mb-4"
-                >
-                  <label
-                    for="password"
-                    class="block mb-2 text-sm font-medium text-gray-900"
-                    >Password</label
-                  >
-                  <input
-                    type="password"
-                    name="Password"
-                    id="password"
-                    placeholder="5+ character yang kuat "
-                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    required=""
-                  />
-                  <div class="flex -mr-px relative">
-                    <span
-                      class="flex items-center leading-normal bg-transparent rounded rounded-l-none border-0 px-3 whitespace-no-wrap absolute right-2/4 top-2/4 -translate-x-1/4 -translate-y-2/4"
-                    >
-                      <a
-                        class="hover:text-gray-700"
-                        id="RevealPass"
-                        onclick="myFunction();"
-                        href="#"
-                      >
-                        <i class="fa fa-eye"></i>
-                      </a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-              <div class="flex items-start justify-end">
-                <!-- <div class="flex items-start">
-                        <div class="flex items-center h-5">
-                            <input id="comments" name="comments" type="checkbox" class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded">
-                          </div>
-                          <div class="ml-3 text-sm">
-                            <label for="comments" class="font-medium text-gray-700 mr-10">Remember me</label>
-                          </div>
-                    </div> -->
-                <a href="Verifikasi.html" class="ml-10 text-sm text-blue-700 hover:underline"
-                  >Lupa Password?</a
-                >
-              </div>
+           
               <button
                 type="submit"
                 name="submit"
                 class="w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition duration-200"
               >
-                Login to your account
+                Cek keberadaan email anda terlebih dulu
               </button>
-              <!-- <div class="text-sm font-medium text-gray-500 text-center">
-                    Are you an Admin? <a href="#" class="text-blue-700 hover:underline ">Login as Admin.</a>
-                    </div> -->
             </form>
           </div>
         </div>
