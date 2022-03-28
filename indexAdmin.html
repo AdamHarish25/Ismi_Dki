@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="Local/css/style.css" />
     <title>Ismi Dki</title>
     <link rel="shortcut icon" href="img/favicon.ico" type="img/favicon" />
+    <link rel="stylesheet" href="node_modules/sweetalert2/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="Local/css/Index.css" />
     <style>
       input::-webkit-outer-spin-button,
@@ -39,6 +40,8 @@
         -moz-appearance: textfield;
       }
     </style>
+    <script src="node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="Javascript.js"></script>
   </head>
   <body>
     <nav
@@ -158,81 +161,18 @@
                 >Kegiatan</a
               >
             </li>
-            <li class="nav-item dropdown ml-2 hidden">
-              <button
-                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:text-gray-700 dropdown-toggle"
-                id="navbarDropdown"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                Jadi Admin
-              </button>
-              <ul
-                class="dropdown-menu shadow-md rounded-md animationGrow border-0 py-5 px-4 fade-down"
-                aria-labelledby="navbarDropdown"
-              >
-                <li>
-                  <h6 class="dropdown-header">Sudah mendaftar jadi Admin?</h6>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50 group"
-                    href="Login.html"
-                  >
-                    <span
-                      ><svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1"
-                        /></svg
-                    ></span>
-                    Login</a
-                  >
-                </li>
-                <br />
-                <li>
-                  <h6 class="dropdown-header">Belum mendaftar jadi Admin?</h6>
-                </li>
-                <li>
-                  <a
-                    class="dropdown-item rounded-md sm:active:bg-blue-500 sm:active:text-gray-50 transform duration-300 md:hover:bg-blue-500 md:hover:text-gray-50"
-                    href="Registration.html"
-                  >
-                    <span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          d="M12 4v16m8-8H4"
-                        />
-                      </svg>
-                    </span>
-                    Daftar segera!</a
-                  >
-                </li>
-              </ul>
-            </li>
             <li class="nav-item ml-2">
               <a
                 class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
                 href="DaftarListAnggota.php"
                 >List Anggota</a
+              >
+            </li>
+            <li class="nav-item ml-2">
+              <button
+                onclick="Warning();"
+                class="nav-link border-b-2 border-transparent px-4 py-6 transform duration-300 md:hover:border-blue-600 md:hover:text-gray-700"
+                >Log out</button
               >
             </li>
           </ul>
